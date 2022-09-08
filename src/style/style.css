@@ -1,0 +1,659 @@
+/* TIPOGRAFÍAS */
+
+/* tipografía de Google Fonts Roboto Mono */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
+
+/* COLORES Y TIPOGRAFÍAS ROOT */
+
+:root {
+    --blue-text: #66D9ED;
+    --white-text: #F7F7F7;
+    --red-text: #E31B6D;
+    --text-font: 'Roboto Mono', monospace;
+}
+
+/* BODY */
+
+/* usamos este selector universal para hacer que todos los tamaños del documento tengan en cuenta el padding. Webkit para compatibilidad */
+
+* {
+    box-sizing: border-box;
+}
+
+/* le quitamos el margin y el padding al body para evitar bordes blancos indeseados. También agregamos un degradado al body. Webkit para compatibilidad*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: gray;
+}
+
+/* establecemos el estilo general de los títulos y párrafos que vamos a emplear en todo nuestro sitio web, quitando los márgenes que vienen por defecto, etc. */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--text-font);
+    color: var(--white-text);
+    text-align: center;
+    -webkit-margin-after: 0;
+    margin-block-end: 0;
+    -webkit-margin-before: 0;
+    margin-block-start: 0;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    border-bottom: 5px solid var(--red-text);
+    margin-bottom: 3rem;
+}
+
+p,
+span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--text-font);
+    color: var(--white-text);
+    -webkit-margin-after: 0;
+    margin-block-end: 0;
+    -webkit-margin-before: 0;
+    margin-block-start: 0;
+}
+
+span {
+    color: var(--red-text);
+}
+
+
+
+/* MENÚ PRINCIPAL */
+
+/* le damos un ancho de 100% al menú para que ocupe toda la parte de arriba de nuestra web, y con display flex alineamos los elementos del menú (logo y links a otras páginas). Ajustamos también el tamaño del logo (cálculo con clamp para hacer que se adapte de forma fluida a las distintas dimensiones de pantalla) y le añadimos un efecto de hover para indicarle al usuario que puede hacer click encima. Webkit para compatibilidad. */
+
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+    font-weight: 300;
+   /*  background-color:transparent; */
+    transition: top 0.2s ease-in-out;
+}
+
+/* usamos flex para que los elementos de la lista queden en línea, y con justify-content y align-items los centramos y separamos dejando espacios entre ellos. Eliminamos los puntos, el padding-inline-start, margin-block-start y margin-block-end que tienen los ul por defecto. Webkit para compatibilidad*/
+
+.menu_items {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.menu_item {
+    padding: 0 1.5em;
+}
+
+/* le quitamos el underline al link y modificamos el aspecto de los links. Empleamos un cálculo realizado con clamp y calc para conseguir que el tamaño del texto se vaya adaptando de forma más fluida según el tamaño del navegador. También usamos display:inline-block para que este elemento ocupe todo su espacio y a la vez actúe como un elemento inline. La posición es relativa para poder posicionar los pseudoelementos ::after */
+
+.menu_items li a {
+    text-decoration: none;
+    color: var(--white-text);
+    font-family: var(--text-font);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--blue-text);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1em;
+    display: inline-block;
+    position: relative;
+    text-shadow: 0px 0px 8px var(--blue-text);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+/*  esto es para cambiar el color de los elementos del menú cuando el ratón pasa por encima, con una pequeña transición para que no quede muy brusco y webkit para evitar problemas de compatibilidad*/
+
+.menu_items li a:hover {
+    font-size: 1.6rem;
+    color: var(--white-text);
+    -webkit-text-stroke-width: 0px;
+
+}
+
+/* MENÚ HAMBURGUESA */
+
+/* este es el menú que aparecerá al llegar a cierto tamaño (indicado en el media query), por lo que en resoluciones grandes está oculto con un display:none */
+
+#burger_menu {
+    display: none;
+}
+
+/* con esta clase creamos las líneas que forman el icono de hamburguesa del menú usando el mismo gráfico que las líneas que subrayan los elementos del menú, añadiendo una pequeña transición para cuando se haga clic y se realice el cambio. Webkit para evitar problemas de compatibilidad con la animación */
+
+.burger-line {
+    border-radius: 15px;
+    height: 5px;
+    width: 2.6em;
+    display: block;
+    background-color: var(--white-text);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    margin-top: 10px;
+    margin-left: 1rem;
+}
+
+/* estas tres clases son las que serán añadidas a las líneas correspondientes y harán que las tres líneas se vuelvan una X al hacer clic sobre el icono del menú hamburguesa con Jquery. Webkit para compatibilidad. */
+
+.primera {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.segunda {
+    opacity: 0;
+    -webkit-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+}
+
+.tercera {
+    -webkit-transform: translateY(-20px) rotate(-45deg);
+    -ms-transform: translateY(-20px) rotate(-45deg);
+    transform: translateY(-20px) rotate(-45deg);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+/* la clase nos permite mostrar/ocultar el menú en móvil al hacer clic sobre el botón, y la de overflow-menu hace que no se pueda hacer scroll por la página cuando el menú se encuentre abierto */
+
+ul.show {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overflow-menu {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.nav-down{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.nav-up {
+    top: -6em;
+}
+
+.solid{
+    background-color:#1a191dda;
+}
+
+/* HEADER */
+
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../media/Header_BG.png");
+    background-size: 110% 110%;
+    animation: gradient_anim 10s ease infinite;
+    box-shadow: inset 0 0 150px rgb(0, 0, 0);
+    background-repeat: repeat;
+}
+
+@keyframes gradient_anim {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+header h1 {
+    font-size: 6em;
+    font-family: var(--text-font);
+}
+
+header h2 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    border-bottom: 0;
+}
+
+header h4 {
+    font-size: 1.6rem;
+}
+
+.scroll {
+    width: 100%;
+    height: 5rem;
+    /*  position: absolute;
+    bottom: 50%;
+    left: 50%; */
+    /*  cursor: pointer; */
+    /* margin-top: -25px;
+    margin-left: -15px; */
+    display: flex;
+    justify-content: center;
+    /*  align-items: center; */
+}
+
+.scroll .mouse {
+    width: 3rem;
+    height: 5rem;
+    /* position: absolute; */
+    /*  top: 0;
+    left: 0; */
+    display: block;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+}
+
+.scroll .wheel {
+    width: 4px;
+    height: 4px;
+    top: 10px;
+    left: 50%;
+    position: relative;
+    background: #ffffff;
+    display: block;
+    border-radius: 50%;
+    margin-left: -2px;
+    animation-name: scroll-wheel;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll-wheel {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(0, 10px, 0);
+        opacity: 0;
+    }
+}
+
+/* MAIN */
+
+main a {
+    text-decoration: none;
+    color: var(--red-text);
+    font-size: 1.5rem;
+    font-family: var(--text-font);
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 0.25rem solid var(--red-text);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+/* SECTION ABOUT */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    background-color: #1A191D;
+    /* box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5); */
+}
+
+#about h2:nth-of-type(2) {
+    border-bottom: 0;
+}
+
+#profile_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+#profile_description {
+    width: 25%;
+}
+
+#profile_description p {
+    margin-bottom: 3rem;
+}
+
+#profile_description a:hover {
+    color: var(--white-text);
+    border-color: var(--white-text);
+    /*  border-color: var(--red-text);
+    background-color: var(--red-text); */
+}
+
+#profile_photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#profile_img img {
+    filter: grayscale(90%);
+    transition: all 0.6s ease;
+}
+
+#profile_img img:hover {
+    filter: grayscale(0%);
+
+}
+
+#profile_photo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--red-text);
+    top: 20px;
+    left: 20px;
+
+    z-index: -1;
+    transition: all 0.6s ease;
+    /* transform: translateX(0px);
+    transform: translateY(0px); */
+}
+
+#profile_photo:hover::after {
+    top: -4px;
+    left: -2px;
+}
+
+
+#tools {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    /*  padding: 0 20rem; */
+}
+
+#tools img {
+    margin: 2rem;
+    transition: all 0.6s ease;
+}
+
+#tools img:hover {
+    transform: scale(1.1);
+
+}
+
+/* SECTION PORTFOLIO */
+
+#portfolio {
+    background-color: #25232B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+#projects {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.project {
+    width: 40em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.project a:nth-of-type(1) {
+    border: 0;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 4%;
+    -webkit-box-shadow: 0 0 30px 1px rgba(121, 121, 121, 0.745);
+    box-shadow: 0 0 30px 1px rgba(121, 121, 121, 0.745);
+}
+
+/* #centered_video {
+    width: 90%;
+    margin: 3rem;
+}
+
+.video_container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-top: 30px;
+    -webkit-box-shadow: 0 0 30px 1px rgba(121, 121, 121, 0.745);
+    box-shadow: 0 0 30px 1px rgba(121, 121, 121, 0.745);
+}
+
+.video_container iframe,
+.video_container object,
+.video_container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.project h2 {
+    border-bottom: 0;
+    color: var(--red-text);
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.project p {
+    margin-bottom: 1.5em;
+}
+
+/* SECTION CONTACT */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    background-color: #1A191D;
+}
+
+#contact p {
+    width: 50%;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.social a {
+    padding: 20px;
+    font-size: 2rem;
+    width: 3em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+    transition: all 0.4s ease;
+    /*    text-decoration: none !important;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-right: 20px;
+    font-size: 1rem;
+    overflow: hidden;
+    position: relative;
+    color: var(--red-text) ;
+    border: 2px solid var(--red-text) ; */
+}
+
+.social a::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 90%;
+    top: -110%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color: var(--red-text);
+    border-radius: 100%;
+}
+
+
+.social a:hover {
+    /* background-color: var(--red-text); */
+    color: white;
+    border-color: var(--white-text);
+}
+
+.social a:hover::after {
+    top: 5%;
+    transition: all 0.2s linear 0s;
+}
+
+footer {
+    background-color: #1A191D;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* BREAKPOINT PARA MÓVIL */
+
+@media screen and (max-width: 793px) {
+
+    /* modificamos la disposición de los elementos del menú con space-around y agregamos un pequeño padding al menú. Webkit para compatibilidad */
+
+    .menu {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        padding: 0.8em 2em;
+    }
+
+    /* le ponemos una posición fija al contenedor de los elementos del menú porque queremos hacer una pequeña animación en la que salgan desde arriba. También cambiamos la dirección del flex-direction a column para que los elementos del menú salgan en columna y ocupando toda la pantalla. Webkit para compatibilidad */
+
+    .menu_items {
+        position: fixed;
+        top: -110vh;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #1A191D;
+        text-align: center;
+        padding-top: 5em;
+        z-index: 10;
+    }
+
+    /* cambiamos el cursor para indicarle al usuario que se puede hacer click en este elemento para desplegar el menú y con display:flex y flex-direction: column nos aseguramos que las líneas se muestran en columna. Cambiamos z-index del "botón" del menú hamburguesa y del logo para que se les pueda hacer click cuando despliegas el menú. Webkit para compatibilidad */
+
+    #burger_menu {
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        z-index: 11;
+    }
+
+    #menu_logo {
+        z-index: 11;
+    }
+
+    #menu_logo a img {
+        width: 6em;
+    }
+
+    .menu_items li a {
+        font-size: 2em;
+    }
+
+}
