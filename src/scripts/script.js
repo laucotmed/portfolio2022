@@ -16,8 +16,8 @@ $(document).ready(function () {
         $('body').toggleClass("overflow-menu");
     })
 
-    $(".menu_item").click(function(){
-        if ($('body').hasClass("overflow-menu")){
+    $(".menu_item").click(function () {
+        if ($('body').hasClass("overflow-menu")) {
             $('body').toggleClass("overflow-menu");
             $(".menu_items").toggleClass("show");
             $("#burger_menu>span:nth-child(1)").toggleClass("primera");
@@ -27,45 +27,46 @@ $(document).ready(function () {
     })
 
     $(window).bind('scroll', function () {
-    
+
         if ($(window).scrollTop() > 150)
             $('.menu').addClass('nav-down');
         else
             $('.menu').removeClass('nav-down');
     });
-    
-    
-    // Hide Header on on scroll down
+
+
+    // ESCONDER MENÚ AL HACER SCROLL HACIA ABAJO
     var lastScrollTop = 0;
-   /*  var delta = 5; */
     var headerHeight = $('header').outerHeight();
-    
-    $(window).scroll(function(){
-        
+    var menuHeight = $(".menu").outerHeight();
+
+    $(window).scroll(function () {
+
         var st = $(this).scrollTop();
-        
-        // Make sure they scroll more than delta
-        /* if(Math.abs(lastScrollTop - st) <= delta)
-            return; */
-        
-        // If they scrolled down and are past the navbar, add class .nav-up.
-        // This is necessary so you never see what is "behind" the navbar.
-        if (st > lastScrollTop && st > headerHeight){
-            // Scroll Down
-            $('.menu').removeClass('nav-down').addClass('nav-up');
-            $('.menu').addClass('solid');
-        } else{
+
+        if($("#burger_menu").css("display") == "none"){
+
+                 // Scroll Down
+        if (st > lastScrollTop && st > menuHeight) {
+            $(".menu").slideUp(400);
+
             // Scroll Up
-            if(st + $(window).height() < $(document).height()) {
-                $('.menu').removeClass('nav-up');
-            }
+        } else if (st + $(window).height() < $(document).height()) {
+            $(".menu").slideDown(400);
         }
 
-        if (st < lastScrollTop && st < headerHeight){
+
+        if (st < headerHeight) {
             $('.menu').removeClass('solid');
+        } else {
+            $('.menu').addClass('solid');
         }
-        
+
         lastScrollTop = st;
+
+        }
+
+       
     });
 
 })

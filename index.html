@@ -26,7 +26,7 @@
 <body>
 
   <!--  MENÚ PRINCIPAL -->
-  <nav class="menu">
+  <nav class="menu nav-down">
     <!-- Menú hamburguesa que se mostrará cuando el tamaño sea lo suficientemente pequeño, formado por tres líneas en span -->
     <div id="burger_menu">
       <span class="burger-line"></span>
@@ -40,7 +40,7 @@
       <li class="menu_item"><a href="#about">//ABOUT</a></li>
       <li class="menu_item"><a href="#portfolio">//PORTFOLIO</a></li>
       <li class="menu_item"><a href="#contact">//CONTACT</a></li>
-      <li class="menu_item"><a href="#">//RESUMÉ</a></li>
+      <!-- <li class="menu_item"><a href="#">//RESUMÉ</a></li> -->
     </ul>
   </nav>
 
@@ -49,10 +49,10 @@
     <h1>LAURA COTE MEDINA</h1>
     <h2>FRONT END WEB DEVELOPER</h2>
     <div class="scroll">
-          <div class="mouse">
-              <div class="wheel"></div>
-          </div>
-  </div>
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -111,7 +111,7 @@
             <video autoplay loop muted>
               <source src="./src/media/ori.mp4" type="video/mp4">
             </video>
-          
+
             <h2>ORI AND THE BLIND FOREST</h2>
           </a>
           <p>Website inspired by the videogame Ori & The Blind Forest. In the Skills section, we use <span>PHP</span>,
@@ -124,7 +124,7 @@
             <video autoplay loop muted>
               <source src="./src/media/katnip.mp4" type="video/mp4">
             </video>
-    
+
             <h2>KATNIP</h2>
           </a>
           <p>This project was made using WordPress and some plugins like Elementor Pro. The chosen theme was "cat cafe",
@@ -137,7 +137,7 @@
             <video autoplay loop muted>
               <source src="./src/media/korean.mp4" type="video/mp4">
             </video>
-            
+
             <h2>KOREAN FOOD</h2>
           </a>
           <p>This website was built from scratch using HTML5, CSS3 and JavaScript. A horizontal scroll is used to go
@@ -150,7 +150,7 @@
             <video autoplay loop muted>
               <source src="./src/media/tourning.mp4" type="video/mp4">
             </video>
-           <!--  <div id="centered_video">
+            <!--  <div id="centered_video">
               <div class="video_container">
                 <iframe src="./src/media/ori.mp4" title="Katnip" frameborder="0" allow="autoplay" allowTransparency="true" background="transparent"></iframe>
               </div>
@@ -159,7 +159,7 @@
           </a>
           <p>Designed a travel app where your itinerary changed according to the weather. Design Thinking was the
             methodology used for the entire UX/UI process, and then a prototype was made with Figma.</p>
-          <a href="https://proyecto-final-laura-cote.herokuapp.com/" target="_blank">LINK TO WEBSITE</a>
+          <a href="https://proyecto-final-laura-cote.herokuapp.com/" target="_blank">LINK TO PROJECT</a>
         </div>
 
       </div>
@@ -170,12 +170,37 @@
 
       <h2>//CONTACT</h2>
 
-      <p>Do you have any <span>question</span> or want to <span>get in touch with me</span>? Feel free to reach me on any of my <span>networks</span> and I will get back to you as soon as I can! </p>
+      <p>Do you have any <span>question</span> or want to <span>get in touch with me</span>? Feel free to reach me on
+        any of my <span>networks</span> and I will get back to you as soon as I can! </p>
 
       <div class="social">
-        <a href="mailto: cotemedinalaura@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a> 
+        <a href="mailto: cotemedinalaura@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+      <div class="contactForm">
+        <form action="" method="post" target="_self">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="How can I help you?" required></textarea>
+          </div>
+
+          <div>
+            <button type="submit" name="submitButton" id="submitButton">Send</button>
+          </div>
+          
+
+
+        </form>
       </div>
 
 

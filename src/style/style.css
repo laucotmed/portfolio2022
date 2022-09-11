@@ -52,7 +52,7 @@ h6 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 500;
     border-bottom: 5px solid var(--red-text);
     margin-bottom: 3rem;
@@ -90,7 +90,7 @@ span {
     justify-content: space-around;
     z-index: 2;
     font-weight: 300;
-   /*  background-color:transparent; */
+    /*  background-color:transparent; */
     transition: top 0.2s ease-in-out;
 }
 
@@ -151,18 +151,19 @@ span {
 
 .burger-line {
     border-radius: 15px;
-    height: 5px;
-    width: 2.6em;
+    height: 4px;
+    width: 1.8em;
     display: block;
     background-color: var(--white-text);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
-    margin-top: 10px;
-    margin-left: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /*  margin-left: 1rem; */
 }
 
 /* estas tres clases son las que serán añadidas a las líneas correspondientes y harán que las tres líneas se vuelvan una X al hacer clic sobre el icono del menú hamburguesa con Jquery. Webkit para compatibilidad. */
@@ -211,17 +212,18 @@ ul.show {
     position: absolute;
 }
 
-.nav-down{
+/* .nav-down {
     position: fixed;
     top: 0;
     width: 100%;
 }
+
 .nav-up {
     top: -6em;
-}
+} */
 
-.solid{
-    background-color:#1a191dda;
+.solid {
+    background-color: #1a191dda;
 }
 
 /* HEADER */
@@ -357,10 +359,12 @@ main a {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 5rem;
+    width: 90%;
 }
 
 #profile_description {
-    width: 25%;
+    /* width: 25%; */
+    flex: 0 1 50%;
 }
 
 #profile_description p {
@@ -380,6 +384,7 @@ main a {
     align-items: center;
     justify-content: center;
     z-index: 1;
+    /* flex: 0 1 50%; */
 }
 
 #profile_img img {
@@ -460,6 +465,8 @@ main a {
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .project a:nth-of-type(1) {
@@ -510,6 +517,12 @@ video {
 
 .project p {
     margin-bottom: 1.5em;
+    padding: 0 2rem;
+}
+
+.project a:hover {
+    color: var(--white-text);
+    border-color: var(--white-text);
 }
 
 /* SECTION CONTACT */
@@ -520,6 +533,8 @@ video {
     align-items: center;
     padding: 5rem 0;
     background-color: #1A191D;
+    justify-content: center;
+    /* height: 95vh; */
 }
 
 #contact p {
@@ -531,7 +546,7 @@ video {
 .social {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    /* width: 30%; */
 }
 
 .social a {
@@ -542,6 +557,7 @@ video {
     text-decoration: none;
     border-radius: 100%;
     transition: all 0.4s ease;
+    margin: 0 1rem;
     /*    text-decoration: none !important;
     width: 60px;
     height: 60px;
@@ -583,16 +599,47 @@ video {
     transition: all 0.2s linear 0s;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    width: 90%;
+    border-radius: 20px;
+    background-color: #25232B;
+}
+
+/* FOOTER */
+
 footer {
+    height: 4rem;
     background-color: #1A191D;
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
     font-size: 1rem;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
+}
+
+/* BREAKPOINT IPAD */
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+    #profile_description p {
+        padding-right: 1rem;
+    }
+
+    #tools {
+        width: 90%;
+    }
+
+    .project {
+        width: 50em;
+    }
 }
 
 /* BREAKPOINT PARA MÓVIL */
@@ -603,15 +650,15 @@ footer p {
 
     .menu {
         -ms-flex-pack: distribute;
-        justify-content: space-around;
-        padding: 0.8em 2em;
+        justify-content: flex-end;
+        /* padding: 0.8em 2em; */
     }
 
     /* le ponemos una posición fija al contenedor de los elementos del menú porque queremos hacer una pequeña animación en la que salgan desde arriba. También cambiamos la dirección del flex-direction a column para que los elementos del menú salgan en columna y ocupando toda la pantalla. Webkit para compatibilidad */
 
     .menu_items {
         position: fixed;
-        top: -110vh;
+        top: -115vh;
         -webkit-transition: all .4s;
         -o-transition: all .4s;
         transition: all .4s;
@@ -642,18 +689,55 @@ footer p {
         -ms-flex-direction: column;
         flex-direction: column;
         z-index: 11;
+        padding: 0.8em 2em;
     }
 
-    #menu_logo {
+  /*   #menu_logo {
         z-index: 11;
     }
 
     #menu_logo a img {
         width: 6em;
-    }
+    } */
 
     .menu_items li a {
         font-size: 2em;
+    }
+
+    header h1 {
+        font-size: 4.5em;
+    }
+
+    header h2 {
+        font-size: 1.8rem;
+    }
+
+    #about{
+        scroll-margin-top:-6rem;
+    }
+
+    #profile_content {
+        flex-direction: column-reverse;
+    }
+
+    #profile_photo{
+        transform: scale(0.9);
+    }
+
+    #profile_description {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tools {
+        width: 100%
+    }
+
+    .project{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
 }
