@@ -44,29 +44,50 @@ $(document).ready(function () {
 
         var st = $(this).scrollTop();
 
-        if($("#burger_menu").css("display") == "none"){
+        if ($("#burger_menu").css("display") == "none") {
 
-                 // Scroll Down
-        if (st > lastScrollTop && st > menuHeight) {
-            $(".menu").slideUp(400);
+            // Scroll Down
+            if (st > lastScrollTop && st > menuHeight) {
+                $(".menu").slideUp(400);
 
-            // Scroll Up
-        } else if (st + $(window).height() < $(document).height()) {
-            $(".menu").slideDown(400);
+                // Scroll Up
+            } else if (st + $(window).height() < $(document).height()) {
+                $(".menu").slideDown(400);
+            }
+
+
+            if (st < headerHeight) {
+                $('.menu').removeClass('solid');
+            } else {
+                $('.menu').addClass('solid');
+            }
+
+            lastScrollTop = st;
+
         }
 
 
-        if (st < headerHeight) {
-            $('.menu').removeClass('solid');
-        } else {
-            $('.menu').addClass('solid');
-        }
-
-        lastScrollTop = st;
-
-        }
-
-       
     });
+
+    /* ENVIAR DATOS FORMULARIO */
+
+ /*    $("#submitButton").click(function () {
+        $(".error").hide();
+        var hasError = false;
+        var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
+
+        var emailFromVal = $("#email").val();
+        if(emailFromVal == '') {
+         $("#email").after('<span class="error">You forgot to enter the email address to send from.</span>');
+         hasError = true;
+        } else if(!emailReg.test(emailFromVal)) {
+         $("#email").after('<span class="error">Enter a valid email address to send from.</span>');
+         hasError = true;
+        }
+
+        return false;
+    }); */
+
+   
 
 })

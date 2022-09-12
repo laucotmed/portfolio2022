@@ -537,8 +537,19 @@ video {
     /* height: 95vh; */
 }
 
+#social_content{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 4rem;
+    align-items: center;
+}
+
+#social_rrss{
+    flex: 0 1 50%;
+}
+
 #contact p {
-    width: 50%;
+    /* width: 50%; */
     padding-bottom: 3rem;
     text-align: center;
 }
@@ -599,6 +610,10 @@ video {
     transition: all 0.2s linear 0s;
 }
 
+.contactForm{
+    flex: 0 1 50%;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -606,6 +621,43 @@ form {
     width: 90%;
     border-radius: 20px;
     background-color: #25232B;
+}
+
+form label{
+
+    font-family: var(--text-font);
+    color: var(--red-text);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+form input, form textarea{
+    border:0;
+    margin:1rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--white-text);
+    border-radius: 10px;
+}
+
+form button{
+    text-decoration: none;
+    color: var(--red-text);
+    font-size: 1.3rem;
+    font-family: var(--text-font);
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 0.25rem solid var(--red-text);
+    transition: .4s;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+form button:hover{
+    color: white;
+    border-color: var(--white-text);
+    
 }
 
 /* FOOTER */
