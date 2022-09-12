@@ -30,7 +30,7 @@ body {
 }
 
 body {
-    background: gray;
+    background:#1A191D;
 }
 
 /* establecemos el estilo general de los títulos y párrafos que vamos a emplear en todo nuestro sitio web, quitando los márgenes que vienen por defecto, etc. */
@@ -537,14 +537,14 @@ video {
     /* height: 95vh; */
 }
 
-#social_content{
+#social_content {
     display: flex;
     flex-direction: row-reverse;
     padding: 0 4rem;
     align-items: center;
 }
 
-#social_rrss{
+#social_rrss {
     flex: 0 1 50%;
 }
 
@@ -610,7 +610,7 @@ video {
     transition: all 0.2s linear 0s;
 }
 
-.contactForm{
+.contactForm {
     flex: 0 1 50%;
 }
 
@@ -623,7 +623,7 @@ form {
     background-color: #25232B;
 }
 
-form label{
+form label {
 
     font-family: var(--text-font);
     color: var(--red-text);
@@ -631,9 +631,11 @@ form label{
     font-weight: 500;
 }
 
-form input, form textarea{
-    border:0;
-    margin:1rem 0;
+form input,
+form textarea {
+    font-family: var(--text-font);
+    border: 0;
+    margin: 1rem 0;
     padding: 1rem;
     font-size: 1rem;
     outline: none;
@@ -641,7 +643,7 @@ form input, form textarea{
     border-radius: 10px;
 }
 
-form button{
+form button {
     text-decoration: none;
     color: var(--red-text);
     font-size: 1.3rem;
@@ -654,10 +656,14 @@ form button{
     cursor: pointer;
 }
 
-form button:hover{
+form button:hover {
     color: white;
     border-color: var(--white-text);
-    
+
+}
+
+.hidden {
+    display: none;
 }
 
 /* FOOTER */
@@ -676,6 +682,61 @@ footer {
 footer p {
     font-size: 1rem;
     /* padding-bottom: 2rem; */
+}
+
+/* THANK YOU PAGE */
+
+#card_main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: #1A191D;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 28rem;
+    padding: 2rem;
+    background: #25232B;
+    color: var(--white-text);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    color: var(--red-text);
+}
+
+.card p{
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#back_link {
+    text-decoration: none;
+    color: var(--red-text);
+    font-size: 1.3rem;
+    font-family: var(--text-font);
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 0.25rem solid var(--red-text);
+    transition: .4s;
+    background-color: transparent;
+    cursor: pointer;
+    align-self: center;
+
 }
 
 /* BREAKPOINT IPAD */
@@ -744,7 +805,7 @@ footer p {
         padding: 0.8em 2em;
     }
 
-  /*   #menu_logo {
+    /*   #menu_logo {
         z-index: 11;
     }
 
@@ -764,15 +825,15 @@ footer p {
         font-size: 1.8rem;
     }
 
-    #about{
-        scroll-margin-top:-6rem;
+    #about {
+        scroll-margin-top: -6rem;
     }
 
     #profile_content {
         flex-direction: column-reverse;
     }
 
-    #profile_photo{
+    #profile_photo {
         transform: scale(0.9);
     }
 
@@ -787,7 +848,7 @@ footer p {
         width: 100%
     }
 
-    .project{
+    .project {
         padding-left: 1rem;
         padding-right: 1rem;
     }
