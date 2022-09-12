@@ -532,6 +532,7 @@ video {
     flex-direction: column;
     align-items: center;
     padding: 5rem 0;
+    padding-bottom: 3rem;
     background-color: #1A191D;
     justify-content: center;
     /* height: 95vh; */
@@ -539,17 +540,23 @@ video {
 
 #social_content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     padding: 0 4rem;
     align-items: center;
 }
 
-#social_rrss {
-    flex: 0 1 50%;
+#social_content p{
+    max-width: 60%;
+    
 }
 
+/* #social_rrss {
+    flex: 0 1 50%;
+} */
+
 #contact p {
-    /* width: 50%; */
+    width: 50%;
+    padding: 0 2rem;
     padding-bottom: 3rem;
     text-align: center;
 }
@@ -611,7 +618,12 @@ video {
 }
 
 .contactForm {
-    flex: 0 1 50%;
+    /* flex: 0 1 50%; */
+    display: flex;
+justify-content: center;
+    max-width: 50%;
+    width: 50rem;
+    margin-bottom: 3rem;
 }
 
 form {
