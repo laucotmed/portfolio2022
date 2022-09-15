@@ -555,7 +555,7 @@ video {
 } */
 
 #contact p {
-    width: 50%;
+    width: 60%;
     padding: 0 2rem;
     padding-bottom: 3rem;
     text-align: center;
@@ -764,6 +764,10 @@ footer p {
 
     .project {
         width: 50em;
+    }
+
+    #contact p{
+        max-width: 50%;
     }
 }
 
