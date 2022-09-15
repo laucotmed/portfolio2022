@@ -1,5 +1,39 @@
 $(document).ready(function () {
 
+    // ESCONDER MENÚ AL HACER SCROLL HACIA ABAJO
+    var lastScrollTop = 0;
+    var headerHeight = $('header').outerHeight();
+    var menuHeight = $(".menu").outerHeight();
+
+    $(window).scroll(function () {
+
+        var st = $(this).scrollTop();
+
+        if ($("#burger_menu").css("display") === "none") {
+
+            // Scroll Down
+            if (st > lastScrollTop && st > menuHeight) {
+                $(".menu").slideUp(400);
+
+                // Scroll Up
+            } else if (st + $(window).height() < $(document).height()) {
+                $(".menu").slideDown(400);
+            }
+
+
+            if (st < headerHeight) {
+                $('.menu').removeClass('solid');
+            } else {
+                $('.menu').addClass('solid');
+            }
+
+            lastScrollTop = st;
+
+        }
+
+
+    });
+
     /* MENÚ HAMBURGUESA */
     /* Hacemos un evento en el que al hacer click en nuestro icono de hamburguesa, las distintas clases se añadan a las líneas que lo forman y se produce una pequeña animación para convertirlas en una X y viceversa al usar toggleClass.  */
 
@@ -35,39 +69,7 @@ $(document).ready(function () {
     });
 
 
-    // ESCONDER MENÚ AL HACER SCROLL HACIA ABAJO
-    var lastScrollTop = 0;
-    var headerHeight = $('header').outerHeight();
-    var menuHeight = $(".menu").outerHeight();
-
-    $(window).scroll(function () {
-
-        var st = $(this).scrollTop();
-
-        if ($("#burger_menu").css("display") === "none") {
-
-            // Scroll Down
-            if (st > lastScrollTop && st > menuHeight) {
-                $(".menu").slideUp(400);
-
-                // Scroll Up
-            } else if (st + $(window).height() < $(document).height()) {
-                $(".menu").slideDown(400);
-            }
-
-
-            if (st < headerHeight) {
-                $('.menu').removeClass('solid');
-            } else {
-                $('.menu').addClass('solid');
-            }
-
-            lastScrollTop = st;
-
-        }
-
-
-    });
+    
 
     /* ENVIAR DATOS FORMULARIO */
 
