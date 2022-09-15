@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // ESCONDER MENÚ AL HACER SCROLL HACIA ABAJO
-/*     var lastScrollTop = 0;
+    var lastScrollTop = 0;
     var headerHeight = $('header').outerHeight();
     var menuHeight = $(".menu").outerHeight();
 
@@ -31,8 +31,7 @@ $(document).ready(function () {
 
         }
 
-
-    }); */
+    });
 
     /* MENÚ HAMBURGUESA */
     /* Hacemos un evento en el que al hacer click en nuestro icono de hamburguesa, las distintas clases se añadan a las líneas que lo forman y se produce una pequeña animación para convertirlas en una X y viceversa al usar toggleClass.  */
