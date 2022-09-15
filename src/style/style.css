@@ -565,8 +565,8 @@ video {
     /* flex: 0 1 50%; */
     display: flex;
 justify-content: center;
-    min-width: 50%;
-    width: 25rem;
+    min-width: 40%;
+    width: 24rem;
     margin-bottom: 3rem;
 }
 
