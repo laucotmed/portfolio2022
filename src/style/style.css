@@ -787,7 +787,7 @@ footer p {
 
     .menu_items {
         position: fixed;
-        top: -115vh;
+        top: -215vh;
         -webkit-transition: all .4s;
         -o-transition: all .4s;
         transition: all .4s;
