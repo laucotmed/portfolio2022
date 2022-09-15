@@ -556,7 +556,7 @@ video {
 
 #contact p {
     /* width: 60%; */
-    padding: 0 3rem;
+    padding: 0 1.5rem;
     padding-bottom: 3rem;
     text-align: center;
 }
@@ -565,8 +565,8 @@ video {
     /* flex: 0 1 50%; */
     display: flex;
 justify-content: center;
-    max-width: 50%;
-    width: 50rem;
+    min-width: 50%;
+    width: 25rem;
     margin-bottom: 3rem;
 }
 
