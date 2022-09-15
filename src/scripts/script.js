@@ -47,10 +47,10 @@ $(document).ready(function () {
         /* Despliego del menú en móvil añadiendo la clase CSS show. En caso de hacer clic en la "X", se desactivaría, cerrando el menú. Usamos stop() para evitar que se forme una cola de acciones si se hace clics muy rápidamente y seguidos. También añadimos la clase "overflow-menu" al body, evitando que podamos hacer scroll mientras el menú se encuentre abierto. */
         $(".menu_items").stop()
         $(".menu_items").toggleClass("show")
-        /* $('body').toggleClass("overflow-menu"); */
+        $('body').toggleClass("overflow-menu");
     })
 
-   /*  $(".menu_item").click(function () {
+    $(".menu_item").click(function () {
         if ($('body').hasClass("overflow-menu")) {
             $('body').toggleClass("overflow-menu");
             $(".menu_items").toggleClass("show");
@@ -58,28 +58,6 @@ $(document).ready(function () {
             $("#burger_menu>span:nth-child(2)").toggleClass("segunda");
             $("#burger_menu>span:nth-child(3)").toggleClass("tercera");
         }
-    }) */
-
-
-    /* ENVIAR DATOS FORMULARIO */
-
- /*    $("#submitButton").click(function () {
-        $(".error").hide();
-        var hasError = false;
-        var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
-
-        var emailFromVal = $("#email").val();
-        if(emailFromVal == '') {
-         $("#email").after('<span class="error">You forgot to enter the email address to send from.</span>');
-         hasError = true;
-        } else if(!emailReg.test(emailFromVal)) {
-         $("#email").after('<span class="error">Enter a valid email address to send from.</span>');
-         hasError = true;
-        }
-
-        return false;
-    }); */
-
-   
+    }) 
 
 })
