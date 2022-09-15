@@ -47,10 +47,10 @@ $(document).ready(function () {
         /* Despliego del menú en móvil añadiendo la clase CSS show. En caso de hacer clic en la "X", se desactivaría, cerrando el menú. Usamos stop() para evitar que se forme una cola de acciones si se hace clics muy rápidamente y seguidos. También añadimos la clase "overflow-menu" al body, evitando que podamos hacer scroll mientras el menú se encuentre abierto. */
         $(".menu_items").stop()
         $(".menu_items").toggleClass("show")
-        $('body').toggleClass("overflow-menu");
+        /* $('body').toggleClass("overflow-menu"); */
     })
 
-    $(".menu_item").click(function () {
+   /*  $(".menu_item").click(function () {
         if ($('body').hasClass("overflow-menu")) {
             $('body').toggleClass("overflow-menu");
             $(".menu_items").toggleClass("show");
@@ -58,18 +58,8 @@ $(document).ready(function () {
             $("#burger_menu>span:nth-child(2)").toggleClass("segunda");
             $("#burger_menu>span:nth-child(3)").toggleClass("tercera");
         }
-    })
+    }) */
 
-    /* $(window).bind('scroll', function () {
-
-        if ($(window).scrollTop() > 150)
-            $('.menu').addClass('nav-down');
-        else
-            $('.menu').removeClass('nav-down');
-    }); */
-
-
-    
 
     /* ENVIAR DATOS FORMULARIO */
 

@@ -753,8 +753,8 @@ footer p {
 
 /* BREAKPOINT IPAD */
 
-/* @media screen and (min-width: 800px) and (max-width: 1280px) { */
-   /*  #profile_description p {
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+    #profile_description p {
         padding-right: 1rem;
     }
 
@@ -764,12 +764,12 @@ footer p {
 
     .project {
         width: 50em;
-    } */
+    }
 
     /* #contact p{
         max-width: 50%;
     } */
-/* } */
+}
 
 /* BREAKPOINT PARA MÓVIL */
 
