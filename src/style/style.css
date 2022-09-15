@@ -556,7 +556,7 @@ video {
 
 #contact p {
     width: 60%;
-    padding: 0 2rem;
+    padding: 0 3rem;
     padding-bottom: 3rem;
     text-align: center;
 }
@@ -766,9 +766,9 @@ footer p {
         width: 50em;
     }
 
-    #contact p{
+    /* #contact p{
         max-width: 50%;
-    }
+    } */
 }
 
 /* BREAKPOINT PARA MÓVIL */
