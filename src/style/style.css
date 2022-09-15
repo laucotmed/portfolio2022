@@ -626,7 +626,7 @@ form button:hover {
 .social {
     display: flex;
     justify-content: space-around;
-    /* width: 30%; */
+    width: 100%;
 }
 
 .social a {
@@ -637,20 +637,7 @@ form button:hover {
     text-decoration: none;
     border-radius: 100%;
     transition: all 0.4s ease;
-    margin: 0 1rem;
-    /*    text-decoration: none !important;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    margin-right: 20px;
-    font-size: 1rem;
-    overflow: hidden;
-    position: relative;
-    color: var(--red-text) ;
-    border: 2px solid var(--red-text) ; */
+   /*  margin: 0 1rem; */
 }
 
 /* .social a::after {
