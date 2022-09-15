@@ -83,21 +83,21 @@ span {
 .menu {
     position: fixed;
     width: 100%;
-    /* height: 6rem; */
-    padding: 0.5em 1em;
+    height: 6rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     z-index: 2;
     font-weight: 300;
+    /*  background-color:transparent; */
     transition: top 0.2s ease-in-out;
 }
 
 /* usamos flex para que los elementos de la lista queden en línea, y con justify-content y align-items los centramos y separamos dejando espacios entre ellos. Eliminamos los puntos, el padding-inline-start, margin-block-start y margin-block-end que tienen los ul por defecto. Webkit para compatibilidad*/
 
 .menu_items {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -125,7 +125,9 @@ span {
     display: inline-block;
     position: relative;
     text-shadow: 0px 0px 8px var(--blue-text);
-    transition: all .4s;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
 }
 
 /*  esto es para cambiar el color de los elementos del menú cuando el ratón pasa por encima, con una pequeña transición para que no quede muy brusco y webkit para evitar problemas de compatibilidad*/
@@ -153,10 +155,15 @@ span {
     width: 1.8em;
     display: block;
     background-color: var(--white-text);
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
     margin-top: 5px;
-    /* margin-bottom: 5px; */
-     margin-left: 1rem;
+    margin-bottom: 5px;
+    /*  margin-left: 1rem; */
 }
 
 /* estas tres clases son las que serán añadidas a las líneas correspondientes y harán que las tres líneas se vuelvan una X al hacer clic sobre el icono del menú hamburguesa con Jquery. Webkit para compatibilidad. */
@@ -204,6 +211,16 @@ ul.show {
     left: 0;
     position: absolute;
 }
+
+/* .nav-down {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-up {
+    top: -6em;
+} */
 
 .solid {
     background-color: #1a191dda;
@@ -761,16 +778,22 @@ footer p {
     /* modificamos la disposición de los elementos del menú con space-around y agregamos un pequeño padding al menú. Webkit para compatibilidad */
 
     .menu {
+        -ms-flex-pack: distribute;
         justify-content: flex-end;
-        padding: 0.8em 2em;
+        /* padding: 0.8em 2em; */
     }
 
     /* le ponemos una posición fija al contenedor de los elementos del menú porque queremos hacer una pequeña animación en la que salgan desde arriba. También cambiamos la dirección del flex-direction a column para que los elementos del menú salgan en columna y ocupando toda la pantalla. Webkit para compatibilidad */
 
     .menu_items {
         position: fixed;
-        top: -215vh;
+        top: -115vh;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
         transition: all .4s;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         width: 100%;
         height: 100%;
@@ -784,11 +807,18 @@ footer p {
 
     #burger_menu {
         cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         z-index: 11;
-        /* padding: 0.8em 2em; */
+        padding: 0.8em 2em;
     }
 
     /*   #menu_logo {
