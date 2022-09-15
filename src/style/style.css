@@ -637,22 +637,10 @@ form button:hover {
     text-decoration: none;
     border-radius: 100%;
     transition: all 0.4s ease;
-   /*  margin: 0 1rem; */
+    margin: 0 1rem;
 }
 
-/* .social a::after {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 90%;
-    top: -110%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-    background-color: var(--red-text);
-    border-radius: 100%;
-} */
+
 
 
 .social a:hover {
