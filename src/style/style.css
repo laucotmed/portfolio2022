@@ -555,66 +555,10 @@ video {
 } */
 
 #contact p {
-    width: 60%;
+    /* width: 60%; */
     padding: 0 3rem;
     padding-bottom: 3rem;
     text-align: center;
-}
-
-.social {
-    display: flex;
-    justify-content: space-around;
-    /* width: 30%; */
-}
-
-.social a {
-    padding: 20px;
-    font-size: 2rem;
-    width: 3em;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 100%;
-    transition: all 0.4s ease;
-    margin: 0 1rem;
-    /*    text-decoration: none !important;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    margin-right: 20px;
-    font-size: 1rem;
-    overflow: hidden;
-    position: relative;
-    color: var(--red-text) ;
-    border: 2px solid var(--red-text) ; */
-}
-
-.social a::after {
-    content: "";
-    display: block;
-    width: 90%;
-    height: 90%;
-    top: -110%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-    background-color: var(--red-text);
-    border-radius: 100%;
-}
-
-
-.social a:hover {
-    /* background-color: var(--red-text); */
-    color: white;
-    border-color: var(--white-text);
-}
-
-.social a:hover::after {
-    top: 5%;
-    transition: all 0.2s linear 0s;
 }
 
 .contactForm {
@@ -677,6 +621,63 @@ form button:hover {
 .hidden {
     display: none;
 }
+
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    /* width: 30%; */
+}
+
+.social a {
+    padding: 20px;
+    font-size: 2rem;
+    width: 3em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+    transition: all 0.4s ease;
+    margin: 0 1rem;
+    /*    text-decoration: none !important;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-right: 20px;
+    font-size: 1rem;
+    overflow: hidden;
+    position: relative;
+    color: var(--red-text) ;
+    border: 2px solid var(--red-text) ; */
+}
+
+/* .social a::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 90%;
+    top: -110%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color: var(--red-text);
+    border-radius: 100%;
+} */
+
+
+.social a:hover {
+    /* background-color: var(--red-text); */
+    color: white;
+    border-color: var(--white-text);
+}
+
+/* .social a:hover::after {
+    top: 5%;
+    transition: all 0.2s linear 0s;
+} */
 
 /* FOOTER */
 
