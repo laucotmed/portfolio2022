@@ -15,13 +15,11 @@
 
 /* BODY */
 
-/* usamos este selector universal para hacer que todos los tamaños del documento tengan en cuenta el padding. Webkit para compatibilidad */
 
 * {
     box-sizing: border-box;
 }
 
-/* le quitamos el margin y el padding al body para evitar bordes blancos indeseados. También agregamos un degradado al body. Webkit para compatibilidad*/
 html,
 body {
     margin: 0;
@@ -73,8 +71,6 @@ span {
 span {
     color: var(--red-text);
 }
-
-
 
 /* MENÚ PRINCIPAL */
 
@@ -265,23 +261,13 @@ header h4 {
 .scroll {
     width: 100%;
     height: 5rem;
-    /*  position: absolute;
-    bottom: 50%;
-    left: 50%; */
-    /*  cursor: pointer; */
-    /* margin-top: -25px;
-    margin-left: -15px; */
     display: flex;
     justify-content: center;
-    /*  align-items: center; */
 }
 
 .scroll .mouse {
     width: 3rem;
     height: 5rem;
-    /* position: absolute; */
-    /*  top: 0;
-    left: 0; */
     display: block;
     border: 2px solid #ffffff;
     border-radius: 20px;
@@ -383,10 +369,7 @@ main a {
     transition: all 0.6s ease;
 }
 
-#profile_img img:hover {
-    filter: grayscale(0%);
 
-}
 
 #profile_photo::after {
     content: "";
@@ -425,10 +408,7 @@ main a {
     transition: all 0.6s ease;
 }
 
-#tools img:hover {
-    transform: scale(1.1);
 
-}
 
 /* SECTION PORTFOLIO */
 
@@ -460,10 +440,6 @@ main a {
     padding-right: 2rem;
 }
 
-.project a:nth-of-type(1) {
-    border: 0;
-}
-
 video {
     width: 100%;
     height: auto;
@@ -477,11 +453,12 @@ video {
     color: var(--red-text);
     margin-top: 0em;
     margin-bottom: 0em;
+    padding-top: 1rem;
 }
 
 .project p {
     margin-bottom: 1.5em;
-    padding: 0 2rem;
+    padding: 0 0.5rem;
 }
 
 .project a:hover {
@@ -518,26 +495,36 @@ video {
     flex: 0 1 50%;
 } */
 
-#contact p {
+#contact_text{
+    width: 40rem;
+    height: auto;
+    margin: 20px auto;
+    max-width: calc(100% - 20px);
+}
+
+#contact_text p {
     /* width: 60%; */
     padding: 0 1.5rem;
-    padding-bottom: 3rem;
+    /* padding-bottom: 3rem; */
     text-align: center;
+    /* width: 40em; */
 }
 
 .contactForm {
     /* flex: 0 1 50%; */
     display: flex;
 justify-content: center;
-    min-width: 40%;
-    width: 24rem;
-    margin-bottom: 3rem;
+    width: 40rem;
+    height: auto;
+    margin: 20px auto;
+    /* margin-bottom: 3rem; */
+    max-width: calc(100% - 20px);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    padding: 2rem 4rem;
+    padding: 2rem;
     width: 90%;
     border-radius: 20px;
     background-color: #25232B;
@@ -579,18 +566,20 @@ form button {
 form button:hover {
     color: white;
     border-color: var(--white-text);
-
 }
 
 .hidden {
     display: none;
 }
 
-
 .social {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 40rem;
+    height: auto;
+    margin: 20px auto;
+   /*  margin-bottom: 3rem; */
+    max-width: calc(100% - 20px);
 }
 
 .social a {
@@ -604,19 +593,11 @@ form button:hover {
     transition: all 0.4s ease;
 }
 
-
-
-
 .social a:hover {
     /* background-color: var(--red-text); */
     color: white;
     border-color: var(--white-text);
 }
-
-/* .social a:hover::after {
-    top: 5%;
-    transition: all 0.2s linear 0s;
-} */
 
 /* FOOTER */
 
@@ -653,7 +634,11 @@ footer p {
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 28rem;
+    width: 26rem;
+    height: auto;
+    margin: 20px auto;
+    max-width: calc(100% - 20px);
+   
     padding: 2rem;
     background: #25232B;
     color: var(--white-text);
@@ -711,9 +696,30 @@ footer p {
     } */
 }
 
+/*Con esta línea damos un efecto de hover a los enlaces de la web, solo servirá en dispositivos con un ancho superior a 900px (así evitamos que se use en dispositivos móviles o tablets*/
+@media(min-width:900px){
+
+    #profile_img img:hover {
+        filter: grayscale(0%);
+    
+    }
+
+    #tools img:hover {
+        transform: scale(1.1);
+    
+    }
+    
+}
+
 /* BREAKPOINT PARA MÓVIL */
 
 @media screen and (max-width: 793px) {
+
+    p,
+span {
+    font-size: 1.3rem;
+}
+
 
     /* modificamos la disposición de los elementos del menú con space-around y agregamos un pequeño padding al menú. Webkit para compatibilidad */
 
@@ -761,14 +767,6 @@ footer p {
         padding: 0.8em 2em;
     }
 
-    /*   #menu_logo {
-        z-index: 11;
-    }
-
-    #menu_logo a img {
-        width: 6em;
-    } */
-
     .menu_items li a {
         font-size: 2em;
     }
@@ -791,6 +789,11 @@ footer p {
 
     #profile_photo {
         transform: scale(0.9);
+    }
+
+    #profile_img img {
+        filter: grayscale(0%);
+        transition: all 0.6s ease;
     }
 
     #profile_description {
