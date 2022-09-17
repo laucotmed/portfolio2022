@@ -28,7 +28,7 @@ body {
 }
 
 body {
-    background:#1A191D;
+    background: #1A191D;
 }
 
 /* establecemos el estilo general de los títulos y párrafos que vamos a emplear en todo nuestro sitio web, quitando los márgenes que vienen por defecto, etc. */
@@ -221,11 +221,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-image: url("../media/Header_BG.png");
-    background-size: 110% 110%; */
     animation: gradient_anim 60s ease infinite;
     box-shadow: inset 0 0 150px rgb(0, 0, 0);
-    /* background-repeat: repeat; */
     background: radial-gradient(circle at bottom, #260078, #250023)
 }
 
@@ -258,7 +255,7 @@ header h4 {
     font-size: 1.6rem;
 }
 
-.scroll {
+/* .scroll {
     width: 100%;
     height: 5rem;
     display: flex;
@@ -298,7 +295,37 @@ header h4 {
         transform: translate3d(0, 10px, 0);
         opacity: 0;
     }
+} */
+
+
+.scroll_arrow {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    margin: 0 0 3px 4px;
+    animation: move_down 2s ease-in-out infinite;
 }
+
+@keyframes move_down {
+    0% {
+        transform: translateY(-20px) rotate(-45deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(20px) rotate(-45deg);
+        ;
+        opacity: 0;
+    }
+}
+
 
 /* MAIN */
 
@@ -328,6 +355,7 @@ main a {
 
 #about h2:nth-of-type(2) {
     border-bottom: 0;
+    font-size: 2.1rem;
 }
 
 #profile_content {
@@ -495,7 +523,7 @@ video {
     flex: 0 1 50%;
 } */
 
-#contact_text{
+#contact_text {
     width: 40rem;
     height: auto;
     margin: 20px auto;
@@ -513,7 +541,7 @@ video {
 .contactForm {
     /* flex: 0 1 50%; */
     display: flex;
-justify-content: center;
+    justify-content: center;
     width: 40rem;
     height: auto;
     margin: 20px auto;
@@ -578,7 +606,7 @@ form button:hover {
     width: 40rem;
     height: auto;
     margin: 20px auto;
-   /*  margin-bottom: 3rem; */
+    /*  margin-bottom: 3rem; */
     max-width: calc(100% - 20px);
 }
 
@@ -638,7 +666,7 @@ footer p {
     height: auto;
     margin: 20px auto;
     max-width: calc(100% - 20px);
-   
+
     padding: 2rem;
     background: #25232B;
     color: var(--white-text);
@@ -655,7 +683,7 @@ footer p {
     color: var(--red-text);
 }
 
-.card p{
+.card p {
     font-weight: 300;
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -697,18 +725,18 @@ footer p {
 }
 
 /*Con esta línea damos un efecto de hover a los enlaces de la web, solo servirá en dispositivos con un ancho superior a 900px (así evitamos que se use en dispositivos móviles o tablets*/
-@media(min-width:900px){
+@media(min-width:900px) {
 
     #profile_img img:hover {
         filter: grayscale(0%);
-    
+
     }
 
     #tools img:hover {
         transform: scale(1.1);
-    
+
     }
-    
+
 }
 
 /* BREAKPOINT PARA MÓVIL */
@@ -716,9 +744,9 @@ footer p {
 @media screen and (max-width: 793px) {
 
     p,
-span {
-    font-size: 1.3rem;
-}
+    span {
+        font-size: 1.3rem;
+    }
 
 
     /* modificamos la disposición de los elementos del menú con space-around y agregamos un pequeño padding al menú. Webkit para compatibilidad */
