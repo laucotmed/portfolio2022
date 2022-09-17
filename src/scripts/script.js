@@ -9,7 +9,7 @@ $(document).ready(function () {
 
         var st = $(this).scrollTop();
 
-        if ($("#burger_menu").css("display") === "none") {
+        /* if ($("#burger_menu").css("display") === "none") { */
 
             // Scroll Down
             if (st > lastScrollTop && st > menuHeight) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
             lastScrollTop = st;
 
-        }
+        /* } */
 
     });
 
