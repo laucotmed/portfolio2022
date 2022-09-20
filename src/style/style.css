@@ -414,7 +414,6 @@ main a {
 }
 
 #profile_description {
-    /* width: 25%; */
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
@@ -427,8 +426,6 @@ main a {
 #profile_description a:hover {
     color: var(--white-text);
     border-color: var(--white-text);
-    /*  border-color: var(--red-text);
-    background-color: var(--red-text); */
 }
 
 #profile_photo {
@@ -443,7 +440,6 @@ main a {
         -ms-flex-pack: center;
             justify-content: center;
     z-index: 1;
-    /* flex: 0 1 50%; */
 }
 
 #profile_img img {
@@ -464,13 +460,10 @@ main a {
     border: 2px solid var(--red-text);
     top: 20px;
     left: 20px;
-
     z-index: -1;
     -webkit-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
-    /* transform: translateX(0px);
-    transform: translateY(0px); */
 }
 
 #profile_photo:hover::after {
@@ -491,7 +484,6 @@ main a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    /*  padding: 0 20rem; */
 }
 
 .tool {
@@ -608,7 +600,6 @@ video {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    /* height: 95vh; */
 }
 
 #social_content {
@@ -625,15 +616,6 @@ video {
             align-items: center;
 }
 
-/* #social_content p{
-    max-width: 60%;
-    
-} */
-
-/* #social_rrss {
-    flex: 0 1 50%;
-} */
-
 #contact_text {
     width: 40rem;
     height: auto;
@@ -642,15 +624,11 @@ video {
 }
 
 #contact_text p {
-    /* width: 60%; */
     padding: 0 1.5rem;
-    /* padding-bottom: 3rem; */
     text-align: center;
-    /* width: 40em; */
 }
 
 .contactForm {
-    /* flex: 0 1 50%; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -660,7 +638,6 @@ video {
     width: 40rem;
     height: auto;
     margin: 20px auto;
-    /* margin-bottom: 3rem; */
     max-width: calc(100% - 20px);
 }
 
@@ -735,7 +712,6 @@ form button:hover {
     width: 40rem;
     height: auto;
     margin: 20px auto;
-    /*  margin-bottom: 3rem; */
     max-width: calc(100% - 20px);
 }
 
@@ -753,7 +729,6 @@ form button:hover {
 }
 
 .social a:hover {
-    /* background-color: var(--red-text); */
     color: white;
     border-color: var(--white-text);
 }
@@ -783,7 +758,6 @@ footer {
 
 footer p {
     font-size: 1rem;
-    /* padding-bottom: 2rem; */
 }
 
 /* THANK YOU PAGE */
@@ -866,7 +840,14 @@ footer p {
 
 /* BREAKPOINT IPAD */
 
-@media screen and (min-width: 800px) and (max-width: 1280px) {
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+
+    #profile_content {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+
     #profile_description p {
         padding-right: 1rem;
     }
@@ -879,12 +860,16 @@ footer p {
         width: 50em;
     }
 
-    /* #contact p{
-        max-width: 50%;
-    } */
+    #profile_img img {
+        -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+        -webkit-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+    }
 }
 
-/*Con esta línea damos un efecto de hover a los enlaces de la web, solo servirá en dispositivos con un ancho superior a 900px (así evitamos que se use en dispositivos móviles o tablets*/
+/* hover effect that will only work on devices wider than 900px (so it doesn't work on mobile or tablet) */
 @media(min-width:900px) {
 
     #profile_img img:hover {
@@ -902,7 +887,7 @@ footer p {
 
 }
 
-/* BREAKPOINT PARA MÓVIL */
+/* BREAKPOINT FOR MOBILE */
 
 @media screen and (max-width: 793px) {
 
@@ -911,21 +896,15 @@ footer p {
         font-size: 1.3rem;
     }
 
-
-    /* modificamos la disposición de los elementos del menú con space-around y agregamos un pequeño padding al menú. Webkit para compatibilidad */
-
     .menu {
         -ms-flex-pack: distribute;
         -webkit-box-pack: end;
                 justify-content: flex-end;
-        /* padding: 0.8em 2em; */
     }
-
-    /* le ponemos una posición fija al contenedor de los elementos del menú porque queremos hacer una pequeña animación en la que salgan desde arriba. También cambiamos la dirección del flex-direction a column para que los elementos del menú salgan en columna y ocupando toda la pantalla. Webkit para compatibilidad */
 
     .menu_items {
         position: fixed;
-        top: -115vh;
+        top: -120vh;
         -webkit-transition: all .4s;
         -o-transition: all .4s;
         transition: all .4s;
@@ -940,8 +919,6 @@ footer p {
         padding-top: 5em;
         z-index: 10;
     }
-
-    /* cambiamos el cursor para indicarle al usuario que se puede hacer click en este elemento para desplegar el menú y con display:flex y flex-direction: column nos aseguramos que las líneas se muestran en columna. Cambiamos z-index del "botón" del menú hamburguesa y del logo para que se les pueda hacer click cuando despliegas el menú. Webkit para compatibilidad */
 
     #burger_menu {
         cursor: pointer;

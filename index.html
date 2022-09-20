@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Etiquetas meta -->
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="./src/media/logo.png">
 
-  <!-- Enlace a la hoja de estilo y al CDN de Jquery -->
+  <!-- Link to stylesheets, JQuery CDN and Scroll-Reveal Plugin -->
   <link rel="stylesheet" href="./src/style/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -26,37 +26,36 @@
 
 <body>
 
-  <!--  MENÚ PRINCIPAL -->
+  <!--  MAIN MENU -->
   <nav class="menu">
-    <!-- Menú hamburguesa que se mostrará cuando el tamaño sea lo suficientemente pequeño, formado por tres líneas en span -->
+    <!-- Burger Menu -->
     <div id="burger_menu">
       <span class="burger-line"></span>
       <span class="burger-line"></span>
       <span class="burger-line"></span>
     </div>
 
-    <!-- Links a las distintas páginas de la web -->
+    <!-- Web Links to Sections-->
     <ul class="menu_items">
       <li class="menu_item"><a href="#home">//HOME</a></li>
       <li class="menu_item"><a href="#about">//ABOUT</a></li>
       <li class="menu_item"><a href="#portfolio">//PORTFOLIO</a></li>
       <li class="menu_item"><a href="#contact">//CONTACT</a></li>
-      <!-- <li class="menu_item"><a href="#">//RESUMÉ</a></li> -->
     </ul>
   </nav>
 
+  <!-- HEADER -->
   <header id="home">
     <h1>LAURA COTE MEDINA</h1>
     <h2>FRONT END WEB DEVELOPER</h2>
     <div class="scroll">
-      <!-- <div class="mouse">
-        <div class="wheel"></div>
-      </div> -->
       <a href="#about"><span class="scroll_arrow"></a></span>
     </div>
   </header>
 
   <main>
+
+    <!-- SECTION ABOUT -->
 
     <section id="about" class="js-reveal">
 
@@ -115,10 +114,10 @@
           <p>WordPress</p>
         </div>
 
-        <div class="tool js-reveal">
+        <!-- <div class="tool js-reveal">
           <img src="./src/media/blender.png" alt="blender.png">
           <p>Blender</p>
-        </div>
+        </div> -->
 
         <div class="tool js-reveal">
           <img src="./src/media/github.png" alt="github.png">
@@ -143,6 +142,8 @@
       </div>
 
     </section>
+
+    <!-- SECTION PORTFOLIO -->
 
     <section id="portfolio" class="js-reveal">
 
@@ -206,6 +207,8 @@
 
     </section>
 
+    <!-- SECTION CONTACT -->
+
     <section id="contact" class="js-reveal">
 
       <h2>//CONTACT</h2>
@@ -249,13 +252,15 @@
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
 
     <p> <i class="fa-regular fa-copyright"></i> Laura Cote Medina 2022</p>
 
   </footer>
 
-  <!-- Enlace al script-->
+  <!-- Script link-->
   <script src="src/scripts/script.js"></script>
 
 </body>
