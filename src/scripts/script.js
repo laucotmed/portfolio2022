@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $.fn.scrollReveal(); 
+
     // ESCONDER MENÚ AL HACER SCROLL HACIA ABAJO
     var lastScrollTop = 0;
     var headerHeight = $('header').outerHeight();
@@ -39,9 +41,9 @@ $(document).ready(function () {
     $("#burger_menu").click(function () {
 
         /* Animación de las barras añadiendo las clases en CSS en las que se modifican la rotación y opacidad */
-        $("#burger_menu>span:nth-child(1)").toggleClass("primera")
-        $("#burger_menu>span:nth-child(2)").toggleClass("segunda")
-        $("#burger_menu>span:nth-child(3)").toggleClass("tercera")
+        $("#burger_menu>span:nth-child(1)").toggleClass("first")
+        $("#burger_menu>span:nth-child(2)").toggleClass("second")
+        $("#burger_menu>span:nth-child(3)").toggleClass("third")
 
         /* Despliego del menú en móvil añadiendo la clase CSS show. En caso de hacer clic en la "X", se desactivaría, cerrando el menú. Usamos stop() para evitar que se forme una cola de acciones si se hace clics muy rápidamente y seguidos. También añadimos la clase "overflow-menu" al body, evitando que podamos hacer scroll mientras el menú se encuentre abierto. */
         $(".menu_items").stop()

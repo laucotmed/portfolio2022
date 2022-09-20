@@ -1,10 +1,10 @@
-/* TIPOGRAFÍAS */
+/* TYPOGRAPHY */
 
-/* tipografía de Google Fonts Roboto Mono */
+/* Google Fonts Roboto Mono */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
 
-/* COLORES Y TIPOGRAFÍAS ROOT */
+/* COLOURS AND TYPOGRAPHIES ROOT */
 
 :root {
     --blue-text: #66D9ED;
@@ -17,7 +17,8 @@
 
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html,
@@ -31,7 +32,7 @@ body {
     background: #1A191D;
 }
 
-/* establecemos el estilo general de los títulos y párrafos que vamos a emplear en todo nuestro sitio web, quitando los márgenes que vienen por defecto, etc. */
+/* TITLES */
 
 h1,
 h2,
@@ -72,42 +73,68 @@ span {
     color: var(--red-text);
 }
 
-/* MENÚ PRINCIPAL */
+/* APPEAR ON SCROLL EFFECT */
 
-/* le damos un ancho de 100% al menú para que ocupe toda la parte de arriba de nuestra web, y con display flex alineamos los elementos del menú (logo y links a otras páginas). Ajustamos también el tamaño del logo (cálculo con clamp para hacer que se adapte de forma fluida a las distintas dimensiones de pantalla) y le añadimos un efecto de hover para indicarle al usuario que puede hacer click encima. Webkit para compatibilidad. */
+.js-reveal {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in, margin-top 1s ease-out;
+    -o-transition: opacity 1s ease-in, margin-top 1s ease-out;
+    transition: opacity 1s ease-in, margin-top 1s ease-out;
+}
+
+.js-reveal--hidden {
+    opacity: 0;
+    margin-top: 3em;
+}
+
+/* MAIN MENU */
 
 .menu {
     position: fixed;
     width: 100%;
     height: 6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     z-index: 2;
     font-weight: 300;
-    /*  background-color:transparent; */
+    -webkit-transition: top 0.2s ease-in-out;
+    -o-transition: top 0.2s ease-in-out;
     transition: top 0.2s ease-in-out;
 }
 
-/* usamos flex para que los elementos de la lista queden en línea, y con justify-content y align-items los centramos y separamos dejando espacios entre ellos. Eliminamos los puntos, el padding-inline-start, margin-block-start y margin-block-end que tienen los ul por defecto. Webkit para compatibilidad*/
-
 .menu_items {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     list-style-type: none;
-    padding-inline-start: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
 }
 
 .menu_item {
     padding: 0 1.5em;
 }
-
-/* le quitamos el underline al link y modificamos el aspecto de los links. Empleamos un cálculo realizado con clamp y calc para conseguir que el tamaño del texto se vaya adaptando de forma más fluida según el tamaño del navegador. También usamos display:inline-block para que este elemento ocupe todo su espacio y a la vez actúe como un elemento inline. La posición es relativa para poder posicionar los pseudoelementos ::after */
 
 .menu_items li a {
     text-decoration: none;
@@ -126,8 +153,6 @@ span {
     transition: .4s;
 }
 
-/*  esto es para cambiar el color de los elementos del menú cuando el ratón pasa por encima, con una pequeña transición para que no quede muy brusco y webkit para evitar problemas de compatibilidad*/
-
 .menu_items li a:hover {
     font-size: 1.6rem;
     color: var(--white-text);
@@ -135,15 +160,13 @@ span {
 
 }
 
-/* MENÚ HAMBURGUESA */
+/* BURGER MENU */
 
-/* este es el menú que aparecerá al llegar a cierto tamaño (indicado en el media query), por lo que en resoluciones grandes está oculto con un display:none */
+/* it appears only on mobile resolutions */
 
 #burger_menu {
     display: none;
 }
-
-/* con esta clase creamos las líneas que forman el icono de hamburguesa del menú usando el mismo gráfico que las líneas que subrayan los elementos del menú, añadiendo una pequeña transición para cuando se haga clic y se realice el cambio. Webkit para evitar problemas de compatibilidad con la animación */
 
 .burger-line {
     border-radius: 15px;
@@ -151,20 +174,14 @@ span {
     width: 1.8em;
     display: block;
     background-color: var(--white-text);
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
     margin-top: 5px;
     margin-bottom: 5px;
-    /*  margin-left: 1rem; */
 }
 
-/* estas tres clases son las que serán añadidas a las líneas correspondientes y harán que las tres líneas se vuelvan una X al hacer clic sobre el icono del menú hamburguesa con Jquery. Webkit para compatibilidad. */
-
-.primera {
+.first {
     -webkit-transform: translateY(8px) rotate(45deg);
     -ms-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
@@ -173,14 +190,14 @@ span {
     transition: all 0.4s;
 }
 
-.segunda {
+.second {
     opacity: 0;
     -webkit-transition: all 0s;
     -o-transition: all 0s;
     transition: all 0s;
 }
 
-.tercera {
+.third {
     -webkit-transform: translateY(-20px) rotate(-45deg);
     -ms-transform: translateY(-20px) rotate(-45deg);
     transform: translateY(-20px) rotate(-45deg);
@@ -188,8 +205,6 @@ span {
     -o-transition: all 0.4s;
     transition: all 0.4s;
 }
-
-/* la clase nos permite mostrar/ocultar el menú en móvil al hacer clic sobre el botón, y la de overflow-menu hace que no se pueda hacer scroll por la página cuando el menú se encuentre abierto */
 
 ul.show {
     top: 0;
@@ -217,26 +232,58 @@ ul.show {
 header {
     height: 100vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: gradient_anim 60s ease infinite;
-    box-shadow: inset 0 0 150px rgb(0, 0, 0);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-animation: gradient_anim 60s ease infinite;
+            animation: gradient_anim 60s ease infinite;
+    -webkit-box-shadow: inset 0 0 150px rgb(0, 0, 0);
+            box-shadow: inset 0 0 150px rgb(0, 0, 0);
+    background: -o-radial-gradient(bottom, circle, #260078, #250023);
     background: radial-gradient(circle at bottom, #260078, #250023)
+}
+
+@-webkit-keyframes gradient_anim {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+                filter: hue-rotate(0deg);
+    }
+
+    50% {
+        -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
+    }
+
+    100% {
+        -webkit-filter: hue-rotate(0deg);
+                filter: hue-rotate(0deg);
+    }
 }
 
 @keyframes gradient_anim {
     0% {
-        filter: hue-rotate(0deg);
+        -webkit-filter: hue-rotate(0deg);
+                filter: hue-rotate(0deg);
     }
 
     50% {
-        filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
     }
 
     100% {
-        filter: hue-rotate(0deg);
+        -webkit-filter: hue-rotate(0deg);
+                filter: hue-rotate(0deg);
     }
 }
 
@@ -255,48 +302,7 @@ header h4 {
     font-size: 1.6rem;
 }
 
-/* .scroll {
-    width: 100%;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-}
-
-.scroll .mouse {
-    width: 3rem;
-    height: 5rem;
-    display: block;
-    border: 2px solid #ffffff;
-    border-radius: 20px;
-}
-
-.scroll .wheel {
-    width: 4px;
-    height: 4px;
-    top: 10px;
-    left: 50%;
-    position: relative;
-    background: #ffffff;
-    display: block;
-    border-radius: 50%;
-    margin-left: -2px;
-    animation-name: scroll-wheel;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes scroll-wheel {
-    from {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translate3d(0, 10px, 0);
-        opacity: 0;
-    }
-} */
-
+/* SCROLL ARROW ANIMATION */
 
 .scroll_arrow {
     display: block;
@@ -305,22 +311,47 @@ header h4 {
     border-left: 5px solid white;
     border-bottom: 5px solid white;
     margin: 0 0 3px 4px;
-    animation: move_down 2s ease-in-out infinite;
+    -webkit-animation: move_down 2s ease-in-out infinite;
+            animation: move_down 2s ease-in-out infinite;
 }
 
-@keyframes move_down {
+@-webkit-keyframes move_down {
     0% {
-        transform: translateY(-20px) rotate(-45deg);
+        -webkit-transform: translateY(-20px) rotate(-45deg);
+                transform: translateY(-20px) rotate(-45deg);
         opacity: 0;
     }
 
     50% {
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(20px) rotate(-45deg);
+        -webkit-transform: translateY(20px) rotate(-45deg);
+                transform: translateY(20px) rotate(-45deg);
+        ;
+        opacity: 0;
+    }
+}
+
+@keyframes move_down {
+    0% {
+        -webkit-transform: translateY(-20px) rotate(-45deg);
+                transform: translateY(-20px) rotate(-45deg);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(20px) rotate(-45deg);
+                transform: translateY(20px) rotate(-45deg);
         ;
         opacity: 0;
     }
@@ -345,12 +376,18 @@ main a {
 /* SECTION ABOUT */
 
 #about {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 5rem 0;
     background-color: #1A191D;
-    /* box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5); */
 }
 
 #about h2:nth-of-type(2) {
@@ -359,17 +396,28 @@ main a {
 }
 
 #profile_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 5rem;
     width: 90%;
 }
 
 #profile_description {
     /* width: 25%; */
-    flex: 0 1 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
 }
 
 #profile_description p {
@@ -385,19 +433,26 @@ main a {
 
 #profile_photo {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     z-index: 1;
     /* flex: 0 1 50%; */
 }
 
 #profile_img img {
-    filter: grayscale(90%);
+    -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
 }
-
-
 
 #profile_photo::after {
     content: "";
@@ -411,6 +466,8 @@ main a {
     left: 20px;
 
     z-index: -1;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
     /* transform: translateX(0px);
     transform: translateY(0px); */
@@ -424,16 +481,29 @@ main a {
 
 #tools {
     width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     /*  padding: 0 20rem; */
 }
 
-#tools img {
+.tool {
     margin: 2rem;
+    text-align: center;
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
+}
+
+.tool img{
+    padding-bottom: 0.5rem;
 }
 
 
@@ -442,28 +512,53 @@ main a {
 
 #portfolio {
     background-color: #25232B;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 5rem 0;
 }
 
 #projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 100%;
 }
 
 .project {
     width: 40em;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -497,21 +592,37 @@ video {
 /* SECTION CONTACT */
 
 #contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 5rem 0;
     padding-bottom: 3rem;
     background-color: #1A191D;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     /* height: 95vh; */
 }
 
 #social_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0 4rem;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /* #social_content p{
@@ -540,8 +651,12 @@ video {
 
 .contactForm {
     /* flex: 0 1 50%; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 40rem;
     height: auto;
     margin: 20px auto;
@@ -550,8 +665,13 @@ video {
 }
 
 form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 2rem;
     width: 90%;
     border-radius: 20px;
@@ -578,6 +698,10 @@ form textarea {
     border-radius: 10px;
 }
 
+form div{
+    text-align: center;
+}
+
 form button {
     text-decoration: none;
     color: var(--red-text);
@@ -586,6 +710,8 @@ form button {
     border-radius: 10px;
     padding: 0.5rem;
     border: 0.25rem solid var(--red-text);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
     background-color: transparent;
     cursor: pointer;
@@ -601,8 +727,11 @@ form button:hover {
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 40rem;
     height: auto;
     margin: 20px auto;
@@ -618,6 +747,8 @@ form button:hover {
     text-align: center;
     text-decoration: none;
     border-radius: 100%;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
@@ -632,12 +763,22 @@ form button:hover {
 footer {
     height: 4rem;
     background-color: #1A191D;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 footer p {
@@ -649,10 +790,19 @@ footer p {
 
 #card_main {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 90vh;
     width: 100%;
     background-color: #1A191D;
@@ -660,8 +810,13 @@ footer p {
 
 .card {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 26rem;
     height: auto;
     margin: 20px auto;
@@ -671,7 +826,8 @@ footer p {
     background: #25232B;
     color: var(--white-text);
     border-radius: 8px;
-    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
+            box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
 }
 
 .card h1 {
@@ -697,10 +853,14 @@ footer p {
     border-radius: 10px;
     padding: 0.5rem;
     border: 0.25rem solid var(--red-text);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
     background-color: transparent;
     cursor: pointer;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 
 }
 
@@ -728,12 +888,15 @@ footer p {
 @media(min-width:900px) {
 
     #profile_img img:hover {
-        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
 
     }
 
-    #tools img:hover {
-        transform: scale(1.1);
+    .tool:hover {
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
 
     }
 
@@ -753,7 +916,8 @@ footer p {
 
     .menu {
         -ms-flex-pack: distribute;
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+                justify-content: flex-end;
         /* padding: 0.8em 2em; */
     }
 
@@ -812,23 +976,38 @@ footer p {
     }
 
     #profile_content {
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
 
     #profile_photo {
-        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+                transform: scale(0.9);
     }
 
     #profile_img img {
-        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+        -webkit-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
         transition: all 0.6s ease;
     }
 
     #profile_description {
         margin-top: 3rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     #tools {
