@@ -495,15 +495,13 @@ main a {
     -webkit-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
-    width: 9.5rem;
+    width: 10rem;
 
 }
 
 .tool img {
     padding-bottom: 0.5rem;
 }
-
-
 
 /* SECTION PORTFOLIO */
 
@@ -994,6 +992,10 @@ footer p {
 
     #tools {
         width: 100%
+    }
+
+    .tool{
+        width: 9.5rem;
     }
 
     .project {
