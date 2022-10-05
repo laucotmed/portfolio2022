@@ -43,18 +43,21 @@ $(document).ready(function () {
         $('body').animate({
             'opacity': '0.0'
         }, 600, function () {
-            //header
+            //Main Menu
             $(".menu_item:nth-of-type(1) a").text("//Inicio");
             $(".menu_item:nth-of-type(2) a").text("//Sobre Mí");
             $(".menu_item:nth-of-type(3) a").text("//Portfolio");
             $(".menu_item:nth-of-type(4) a").text("//Contacto");
-            $(".language-selected").text("🇪🇸");
-            $(".language-selected").removeClass("change-es");
-            $(".language-selected").addClass("change-en");
+
+
+
+            $(".selected-lang img").attr("src", "https://cdn.countryflags.com/thumbs/spain/flag-800.png")
+            /* $(".language-selected").removeClass("change-es");
+            $(".language-selected").addClass("change-en"); */
             //About
             $("#about h2:nth-child(1)").text("//SOBRE MÍ");
             //About
-            $("#profile_description p").html("¡Hola! Me llamo <span>Laura Cote Medina</span>. Soy una desalloradora web de España a la que le apasiona el <span>Web Design</span> and        eager to obtain more professional experience, preferably on <span>FrontEnd</span>. I'm always willing to learn other technologies and tools and I'm good at working in a team following agile methodologies, while being very independent when solving problems alone. ");
+            $("#profile_description p").html("¡Hola! Me llamo <span>Laura Cote Medina</span>. Soy una desalloradora web de España, apasionada del <span>Web Design</span> y con ganas de adquirir más experiencia profesional, preferentemente en el ámbito del <span>FrontEnd</span>. Siempre estoy dispuesta a aprender tecnologías y metodologías nuevas. Se me da bien trabajar en equipo, siendo también independiente a la hora de resolver problemas. ");
 
             $('body').animate({
                 'opacity': '1.0'
