@@ -160,6 +160,113 @@ span {
 
 }
 
+/* LANGUAGE CHANGE */
+
+.language {
+  /*  position: absolute; */
+     /* width: 120px;
+    margin-left: 40px; */
+    /* display: flex;
+    flex-direction: column; */
+
+    /* width: 2.1rem; */
+  height: 2.1rem;
+/*   background: #FFFFFF; */
+ /*  top: 2rem; 
+  right: 4rem; */
+/*   transform: translateX(-50%); */
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.language:hover {
+    height: 5rem;
+  /*  width: 5rem; */
+    border-radius: 20px;
+    /* box-shadow: 0px 7px 10px rgba(79, 104, 113, 0.30); */
+}
+
+.language-selected {
+    
+    display: flex;
+    flex-direction: column;
+ /*   flex-direction: row; */
+    align-items: center;
+    /* color: #fff; */
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.8rem;
+
+    
+    text-decoration: none;
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    position: relative;
+    top: 0;
+   
+}
+
+/* .language-selected:before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(https://www.countryflags.io/br/flat/32.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+} */
+
+/* .language-selected.change-en:before {
+    background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+
+.language-selected.change-es:before {
+    background-image: url(https://www.countryflags.io/es/flat/32.png);
+} */
+
+.language ul li img {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+  /*   left: 50%;
+    transform: translate(-103%, -40%); */
+    margin-bottom: 8px;
+  /*   margin-right: 8px; */
+    border-radius: 50%;
+  /*   border: 2px solid var(--red-text); */
+    box-shadow: 0px 0px 6px rgba(79, 104, 113, 0.3);
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    transform: scale(1) !important;
+}
+
+/* .en{
+    z-index:11;   
+  display: block;
+    height: 40px;
+    margin-bottom: 5px;
+} */
+
+.es{
+    z-index:10;
+    opacity:0;
+    transform:translateY(-40px) ;
+    transition-duration:300ms;
+}
+
+.language-selected:hover .es{
+    transform:translateY(0px);
+  opacity:1
+}
+
+/* .language:hover ul {
+    display: block;
+} */
+
 /* BURGER MENU */
 
 /* it appears only on mobile resolutions */
@@ -477,13 +584,13 @@ main a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: auto;
     margin: 20px auto;
     max-width: calc(100% - 20px);
@@ -577,6 +684,10 @@ video {
 .project p {
     margin-bottom: 1.5em;
     padding: 0 0.5rem;
+}
+
+.project a:nth-of-type(1){
+    border: 0;
 }
 
 .project a:hover {
@@ -994,7 +1105,7 @@ footer p {
         width: 100%
     }
 
-    .tool{
+    .tool {
         width: 9.5rem;
     }
 
