@@ -46,7 +46,7 @@ $(document).ready(function () {
             //Main Menu
             $(".menu_item:nth-of-type(1) a").text("//Inicio");
             $(".menu_item:nth-of-type(2) a").text("//Sobre Mí");
-           /*  $(".menu_item:nth-of-type(3) a").text("//Portfolio"); */
+            /*  $(".menu_item:nth-of-type(3) a").text("//Portfolio"); */
             $(".menu_item:nth-of-type(4) a").text("//Contacto");
 
             //Flag Change
@@ -96,6 +96,16 @@ $(document).ready(function () {
                 'opacity': '1.0'
             }, 600);
         });
+
+        if ($(".menu_items").hasClass("show")) {
+
+            $('body').toggleClass("overflow-menu");
+            $(".menu_items").toggleClass("show");
+            $("#burger_menu>span:nth-child(1)").toggleClass("first")
+            $("#burger_menu>span:nth-child(2)").toggleClass("second")
+            $("#burger_menu>span:nth-child(3)").toggleClass("third")
+
+        }
     });
 
     //English
@@ -158,12 +168,21 @@ $(document).ready(function () {
                 'opacity': '1.0'
             }, 600);
         });
+
+        if ($(".menu_items").hasClass("show")) {
+            if ($('body').hasClass("overflow-menu")) {
+                $('body').toggleClass("overflow-menu");
+                $(".menu_items").toggleClass("show");
+                $("#burger_menu>span:nth-child(1)").toggleClass("first")
+                $("#burger_menu>span:nth-child(2)").toggleClass("second")
+                $("#burger_menu>span:nth-child(3)").toggleClass("third")
+            }
+        }
     });
 
     /* BURGER MENU */
 
     $("#burger_menu").click(function () {
-
 
         $("#burger_menu>span:nth-child(1)").toggleClass("first")
         $("#burger_menu>span:nth-child(2)").toggleClass("second")
@@ -178,9 +197,9 @@ $(document).ready(function () {
         if ($('body').hasClass("overflow-menu")) {
             $('body').toggleClass("overflow-menu");
             $(".menu_items").toggleClass("show");
-            $("#burger_menu>span:nth-child(1)").toggleClass("primera");
-            $("#burger_menu>span:nth-child(2)").toggleClass("segunda");
-            $("#burger_menu>span:nth-child(3)").toggleClass("tercera");
+            $("#burger_menu>span:nth-child(1)").toggleClass("first")
+            $("#burger_menu>span:nth-child(2)").toggleClass("second")
+            $("#burger_menu>span:nth-child(3)").toggleClass("third")
         }
     })
 
