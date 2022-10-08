@@ -36,8 +36,6 @@ $(document).ready(function () {
 
     /*  LANGUAGE CHANGE */
 
-
-
     //Spanish
     $(".es").click(function () {
 

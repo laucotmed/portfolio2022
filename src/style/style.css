@@ -233,14 +233,11 @@ span {
     transition: all 0.2s ease-in-out;
 } 
 
-
-
-/* .es, .en{
-    z-index:10;
-    opacity:0;
-    transform:translateX(-40px) ;
-    transition-duration:300ms;
+#lang-menu-mobile{
+    display: none;
 }
+
+/* 
 
 .selected-language{
     z-index:11;   
@@ -1038,6 +1035,24 @@ footer p {
 
     .menu_items li a {
         font-size: 2em;
+    }
+
+    .lang-menu{
+        display: none;
+    }
+
+    #lang-menu-mobile{
+        display: block;
+    }
+
+    #lang-menu-mobile ul{
+        padding-inline-start: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .es, .en{
+        margin: 10px;
     }
 
     header h1 {
