@@ -1057,7 +1057,7 @@ footer p {
         opacity: 0;
     }
 
-    #lang-menu-mobile:hover ul{
+    #lang-menu-mobile:hover ul, #lang-menu-mobile:active ul{
         opacity: 1;
     }
 
