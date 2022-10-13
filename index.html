@@ -273,7 +273,27 @@
 
 
       <div class="contactForm js-reveal">
-        <form method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" action="/pages/thankyou">
+
+        <form method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" action="/pages/thankyou.html" id="form_EN">
+
+          <input name="bot-field" class="hidden">
+
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" required>
+
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" placeholder="How can I help you?" required></textarea>
+
+          <div>
+            <button type="submit" name="submitButton" id="submitButton">Send</button>
+          </div>
+
+        </form>
+
+        <form method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" action="/pages/gracias.html" id="form_ES">
 
           <input name="bot-field" class="hidden">
 
