@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-   /*  $('#form_ES').hide(); */
+    $('#form_ES').hide();
 
     /* INITIALIZE MAKE APPEAR CONTENT ON SCROLL */
 
@@ -45,6 +45,11 @@ $(document).ready(function () {
         $('body').animate({
             'opacity': '0.0'
         }, 600, function () {
+
+            if ($('#lang-menu-mobile ul').css("opacity") == "1"){
+                $('#lang-menu-mobile ul').css("opacity", "0");
+            }
+
             //Main Menu
             $(".menu_item:nth-of-type(1) a").text("//Inicio");
             $(".menu_item:nth-of-type(2) a").text("//Sobre Mí");
@@ -87,7 +92,7 @@ $(document).ready(function () {
             $("#contact h2").text("//CONTACTO");
             $("#contact_text p").html('¿Tienes alguna <span>pregunta</span> o quieres <span>ponerte en contacto conmigo</span>? ¡No dudes en <span>usar este formulario</span> o contactarme a través de cualquiera de mis <span>redes</span> y responderé lo más rápido posible!');
 
-            
+
 
             $(".contactForm form label:nth-of-type(1)").text('Nombre');
             $(".contactForm form label:nth-of-type(2)").text('Correo electrónico');
@@ -95,11 +100,11 @@ $(document).ready(function () {
             $("#message").attr("placeholder", "¿En qué puedo ayudarte?")
             $("#submitButton").text('Enviar');
 
-            /* $('#form_ES').show();
-            $('#form_EN').hide(); */
-            
-            $('#form_EN').css("display", "none");
-            $('#form_ES').css("display", "flex");
+            $('#form_ES').show();
+            $('#form_EN').hide();
+
+            /*  $('#form_EN').css("display", "none");
+             $('#form_ES').css("display", "flex"); */
 
             //FadeIn Animation
             $('body').animate({
@@ -116,6 +121,8 @@ $(document).ready(function () {
             $("#burger_menu>span:nth-child(3)").toggleClass("third")
 
         }
+
+       
     });
 
     //English
@@ -125,6 +132,11 @@ $(document).ready(function () {
         $('body').animate({
             'opacity': '0.0'
         }, 600, function () {
+
+            if ($('#lang-menu-mobile ul').css("opacity") == "1"){
+                $('#lang-menu-mobile ul').css("opacity", "0");
+            }
+
             //Main Menu
             $(".menu_item:nth-of-type(1) a").text("//HOME");
             $(".menu_item:nth-of-type(2) a").text("//ABOUT");
@@ -167,7 +179,7 @@ $(document).ready(function () {
             $("#contact h2").text("//CONTACTO");
             $("#contact_text p").html('Do you have any <span>question</span> or want to <span>get in touch with me</span>? Feel free to use this <span>form</span> or reach me on any of my <span>networks</span> and I will get back to you as soon as I can!');
 
-           
+
 
             $(".contactForm form label:nth-of-type(1)").text('Name');
             $(".contactForm form label:nth-of-type(2)").text('Email');
@@ -175,11 +187,11 @@ $(document).ready(function () {
             $("#message").attr("placeholder", "How can I help you?")
             $("#submitButton").text('Send');
 
-             /* $('#form_EN').show();
-            $('#form_ES').hide(); */
+            $('#form_EN').show();
+            $('#form_ES').hide();
 
-            $('#form_ES').css("display", "none");
-            $('#form_EN').css("display", "flex");
+            /*  $('#form_ES').css("display", "none");
+            $('#form_EN').css("display", "flex"); */
 
             //FadeIn Animation
             $('body').animate({
@@ -221,10 +233,8 @@ $(document).ready(function () {
         }
     })
 
-    /* $("#submitButton").click(function () {
-        if($("#submitButton").text() == 'Enviar'){
-            $('form').attr('action', '/pages/gracias.html');
-        }
-    }); */
+    $('#lang-menu-mobile').click(function () {
+        $('#lang-menu-mobile ul').css("opacity", "1");
+    });
 
 })
