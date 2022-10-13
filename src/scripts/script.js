@@ -60,7 +60,7 @@ $(document).ready(function () {
             $(".selected-lang img").attr("src", "./src/media/esp.png")
 
             //Header
-            $("#home h2").text("DESARROLADORA WEB FRONTEND");
+            $("#home h2").text("DESARROLADORA WEB FRONT END");
 
             //About
             $("#about h2:nth-of-type(1)").text("//SOBRE MÍ");
@@ -147,7 +147,7 @@ $(document).ready(function () {
             $(".selected-lang img").attr("src", "./src/media/uk.png")
 
             //Header
-            $("#home h2").text("FRONTEND WEB DEVELOPER");
+            $("#home h2").text("FRONT END WEB DEVELOPER");
 
             //About
             $("#about h2:nth-of-type(1)").text("//ABOUT");
