@@ -203,4 +203,10 @@ $(document).ready(function () {
         }
     })
 
+    $("#submitButton").click(function () {
+        if($("#submitButton").text() == 'Enviar'){
+            $('form').attr('action', '/pages/gracias.html');
+        }
+    });
+
 })
