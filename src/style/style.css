@@ -1053,7 +1053,7 @@ footer p {
         padding-inline-start: 0;
         display: flex;
         flex-direction: row;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
         opacity: 0;
         list-style: none;
     }

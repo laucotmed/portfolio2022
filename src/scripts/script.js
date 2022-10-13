@@ -60,7 +60,7 @@ $(document).ready(function () {
             $(".selected-lang img").attr("src", "./src/media/esp.png")
 
             //Header
-            $("#home h2").text("DESARROLADORA WEB FRONT END");
+            $("#home h2").text("DESARROLADORA WEB FRONTEND");
 
             //About
             $("#about h2:nth-of-type(1)").text("//SOBRE MÍ");
@@ -147,7 +147,7 @@ $(document).ready(function () {
             $(".selected-lang img").attr("src", "./src/media/uk.png")
 
             //Header
-            $("#home h2").text("FRONT END WEB DEVELOPER");
+            $("#home h2").text("FRONTEND WEB DEVELOPER");
 
             //About
             $("#about h2:nth-of-type(1)").text("//ABOUT");
@@ -176,7 +176,7 @@ $(document).ready(function () {
             $(".project:nth-of-type(4) a:nth-of-type(2)").text('LINK TO PROJECT');
 
             //Contact
-            $("#contact h2").text("//CONTACTO");
+            $("#contact h2").text("//CONTACT");
             $("#contact_text p").html('Do you have any <span>question</span> or want to <span>get in touch with me</span>? Feel free to use this <span>form</span> or reach me on any of my <span>networks</span> and I will get back to you as soon as I can!');
 
 
