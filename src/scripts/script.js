@@ -85,6 +85,8 @@ $(document).ready(function () {
             $("#contact h2").text("//CONTACTO");
             $("#contact_text p").html('¿Tienes alguna <span>pregunta</span> o quieres <span>ponerte en contacto conmigo</span>? ¡No dudes en <span>usar este formulario</span> o contactarme a través de cualquiera de mis <span>redes</span> y responderé lo más rápido posible!');
 
+            $('form').attr('action', '/pages/gracias.html');
+
             $(".contactForm form label:nth-of-type(1)").text('Nombre');
             $(".contactForm form label:nth-of-type(2)").text('Correo electrónico');
             $(".contactForm form label:nth-of-type(3)").text('Mensaje');
@@ -157,6 +159,8 @@ $(document).ready(function () {
             $("#contact h2").text("//CONTACTO");
             $("#contact_text p").html('Do you have any <span>question</span> or want to <span>get in touch with me</span>? Feel free to use this <span>form</span> or reach me on any of my <span>networks</span> and I will get back to you as soon as I can!');
 
+            $('form').attr('action', '/pages/thankyou.html');
+
             $(".contactForm form label:nth-of-type(1)").text('Name');
             $(".contactForm form label:nth-of-type(2)").text('Email');
             $(".contactForm form label:nth-of-type(3)").text('Message');
@@ -203,10 +207,10 @@ $(document).ready(function () {
         }
     })
 
-    $("#submitButton").click(function () {
+    /* $("#submitButton").click(function () {
         if($("#submitButton").text() == 'Enviar'){
             $('form').attr('action', '/pages/gracias.html');
         }
-    });
+    }); */
 
 })
