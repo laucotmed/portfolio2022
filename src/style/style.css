@@ -738,9 +738,9 @@ video {
     max-width: calc(100% - 20px);
 }
 
-/* #form_ES{
+#form_ES{
     display: none;
-} */
+}
 
 form {
     display: -webkit-box;
