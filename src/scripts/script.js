@@ -67,6 +67,7 @@ $(document).ready(function () {
 
             $("#profile_description p").html("¡Hola! Me llamo <span>Laura Cote Medina</span>. Soy una desalloradora web de España, apasionada del <span>Diseño Web</span> y con ganas de adquirir más experiencia profesional, preferentemente en el ámbito del <span>FrontEnd</span>. Siempre estoy dispuesta a aprender tecnologías y metodologías nuevas. Se me da bien trabajar en equipo, siendo también independiente a la hora de resolver problemas. ");
             $("#profile_description a").text("Descargar CV");
+            $("#profile_description a").attr("href", "./src/media/CV_Laura_Cote_ES.pdf")
 
             $("#about h2:nth-of-type(2)").text("Herramientas y Tecnologías");
 
@@ -154,6 +155,7 @@ $(document).ready(function () {
 
             $("#profile_description p").html("Hi! My name is <span>Laura Cote Medina</span>. I'm a web developer from Spain who is passionate about <span>Web Design</span> and eager to obtain more professional experience, preferably on <span>FrontEnd</span>. I'm always willing to learn other technologies and tools and I'm good at working in a team following agile methodologies, while being very independent when solving problems alone.");
             $("#profile_description a").text("Download CV");
+            $("#profile_description a").attr("href", "./src/media/CV_Laura_Cote_ENG.pdf")
 
             $("#about h2:nth-of-type(2)").text("Tools & Technologies");
 
