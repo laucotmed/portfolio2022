@@ -18,7 +18,7 @@
   <!-- Link to stylesheets, JQuery CDN and Scroll-Reveal Plugin -->
   <link rel="stylesheet" href="./src/style/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="/src/scripts/jquery.scroll-reveal.js"></script>
 
   <title>Laura Cote's Portfolio</title>
@@ -26,9 +26,16 @@
 
 <body>
 
+  <div id="cursor">
+    <div class="cursor__circle">
+      <div class="cursor__text"></div>
+    </div>
+  </div>
+
+
   <!--  MAIN MENU -->
   <nav class="menu">
-    
+
     <!-- Language Icons -->
     <div id="lang-menu-mobile">
       <div class="selected-lang">
@@ -43,7 +50,7 @@
         </li>
       </ul>
 
-     <!--  <ul>
+      <!--  <ul>
         <li class="en">
           <img src="./src/media/uk.png">
         </li>
@@ -81,7 +88,7 @@
       </div>
     </ul>
 
-    
+
 
   </nav>
 
@@ -105,12 +112,26 @@
       <div id="profile_content" class="js-reveal">
 
         <div id="profile_description">
-          <p>Hi! My name is <span>Laura Cote Medina</span>. I'm a web developer from Spain who is passionate about
-            <span>Web Design</span> and eager to obtain more professional experience, preferably on
-            <span>FrontEnd</span>. I'm always willing to learn other technologies and tools and I'm good at working in a
-            team following agile methodologies, while being very independent when solving problems alone. </p>
+          <p>Hi! My name is <span>Laura Cote Medina</span>. I'm a <span>web developer</span> from Spain with
+            <span>proffesional experience</span> in creating and managing attractive websites using technologies like
+            <span>HTML, CSS, and JavaScript</span>. I'm passionate about <span>Web Design</span> and eager to continue
+            growing professionally, especially in <span>FrontEnd</span> development. I'm skilled at collaborating with
+            <span>multidisciplinary teams</span> while also being <span>highly independent</span> and effective when
+            solving problems on my own. I'm committed to <span>continuous improvement</span> and adopting new
+            technologies.
+          </p>
 
-          <a href="./src/media/CV_Laura_Cote_ENG_2024.pdf" download="CV_Laura_Cote" target="_blank">Download CV</a>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle">
+            </span>
+            <a href="./src/media/CV_Laura_Cote_ENG_2024.pdf" download="CV_Laura_Cote" target="_blank"
+              class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Download CV
+              </span>
+            </a>
+          </div>
+
         </div>
 
         <div id="profile_photo">
@@ -124,63 +145,189 @@
       <h2>Tools & Technologies</h2>
 
       <div id="tools" class="js-reveal">
-        <div class="tool js-reveal">
-          <img src="./src/media/html.png" alt="html.png">
-          <p>HTML5</p>
+        <div class="tools-track">
+          <div class="tool">
+            <img src="./src/media/tecnologies/html.png" alt="html.png">
+            <p>HTML5</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/css3.png" alt="css3.png">
+            <p>CSS3</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/js.png" alt="js.png">
+            <p>JavaScript</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/jquery.png" alt="jquery.png">
+            <p>JQuery</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/figma.png" alt="figma.png">
+            <p>Figma</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/wp.png" alt="wp.png">
+            <p>WordPress</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/blender.png" alt="blender.png">
+            <p>Blender</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/github.png" alt="github.png">
+            <p>GitHub</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/visual.png" alt="visual.png">
+            <p>VS Code</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/mysql.png" alt="mysql.png">
+            <p>MySQL</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/php.png" alt="php.png">
+            <p>PHP</p>
+          </div>
         </div>
-        <div class="tool js-reveal">
-          <img src="./src/media/css3.png" alt="css3.png">
-          <p>CSS3</p>
+        <div class="tools-track">
+          <div class="tool">
+            <img src="./src/media/tecnologies/html.png" alt="html.png">
+            <p>HTML5</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/css3.png" alt="css3.png">
+            <p>CSS3</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/js.png" alt="js.png">
+            <p>JavaScript</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/jquery.png" alt="jquery.png">
+            <p>JQuery</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/figma.png" alt="figma.png">
+            <p>Figma</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/wp.png" alt="wp.png">
+            <p>WordPress</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/blender.png" alt="blender.png">
+            <p>Blender</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/github.png" alt="github.png">
+            <p>GitHub</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/visual.png" alt="visual.png">
+            <p>VS Code</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/mysql.png" alt="mysql.png">
+            <p>MySQL</p>
+          </div>
+          <div class="tool">
+            <img src="./src/media/tecnologies/php.png" alt="php.png">
+            <p>PHP</p>
+          </div>
         </div>
+      </div>
 
-        <div class="tool js-reveal">
-          <img src="./src/media/js.png" alt="js.png">
-          <p>JavaScript</p>
+
+      <h2 class="timeline-title">Experience and Education</h2>
+
+      <!-- TIMELINE -->
+
+      <div class="timeline-wrapper">
+
+        <div class="line-container">
+
+          <div class="dot-wrapper">
+            <img src="/src/media/logos/inficonglobal_logo.jpg" alt="Circle Image">
+            <div class="dot"></div>
+
+            <div class="texto-historia">
+
+              <p>2024</p>
+
+              <span>Web Developer <br>at Inficon Global</span>
+            </div>
+
+
+          </div>
+
+
+          <div class="dot-wrapper">
+            <img src="/src/media/logos/CEI_logo.jpeg" alt="Circle Image">
+            <div class="dot"></div>
+
+            <div class="texto-historia">
+              <p>2022</p>
+              <span>Professional Master's Degree <br>in Web Development and Conceptualization at CEI: School of Design & Marketing Marketing</span>
+            </div>
+          </div>
+
+
+          <div class="dot-wrapper">
+            <img src="/src/media/logos/croxel_logo.jpg" alt="Circle Image">
+            <div class="dot"></div>
+
+            <div class="texto-historia">
+              <p>2020</p>
+              <span>2D & 3D Artist <br>at Croxel Studios</span>
+            </div>
+          </div>
+
+
+          <div class="dot-wrapper">
+            <img src="/src/media/logos/aulaarcade_logo.jpg" alt="Circle Image">
+            <div class="dot"></div>
+
+            <div class="texto-historia">
+              <p>2018</p>
+              <span>Advanced 3D Modeling and Animation for videogames course at Aula Arcade</span>
+            </div>
+          </div>
+
+          <div class="dot-wrapper">
+            <img src="/src/media/logos/US_logo.webp" alt="Circle Image">
+            <div class="dot"></div>
+
+            <div class="texto-historia">
+              <p>2017</p>
+              <span>Degree in Audiovisual Communication at the University of Seville</span>
+            </div>
+          </div>
+
+
+          <div class="wavy-line">
+            <svg preserveAspectRatio="none">
+              <path d="" />
+            </svg>
+          </div>
         </div>
-
-        <div class="tool js-reveal">
-          <img src="./src/media/jquery.png" alt="jquery.png">
-          <p>JQuery</p>
-        </div>
-
-        <div class="tool js-reveal">
-          <img src="./src/media/figma.png" alt="figma.png">
-          <p>Figma</p>
-        </div>
-
-        <div class="tool js-reveal">
-          <img src="./src/media/wp.png" alt="wp.png">
-          <p>WordPress</p>
-        </div>
-
-        <!-- <div class="tool js-reveal">
-          <img src="./src/media/blender.png" alt="blender.png">
-          <p>Blender</p>
-        </div> -->
-
-        <div class="tool js-reveal">
-          <img src="./src/media/github.png" alt="github.png">
-          <p>GitHub</p>
-        </div>
-
-        <div class="tool js-reveal">
-          <img src="./src/media/visual.png" alt="visual.png">
-          <p>VS Code</p>
-        </div>
-
-        <div class="tool js-reveal">
-          <img src="./src/media/mysql.png" alt="mysql.png">
-          <p>MySQL</p>
-        </div>
-
-        <div class="tool js-reveal">
-          <img src="./src/media/php.png" alt="php.png">
-          <p>PHP</p>
-        </div>
-
+        <button type="button" class="btn prev-slide"><svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px"
+            viewBox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve">
+            <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+          </svg></button>
+        <button type="button" class="btn next-slide"><svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px"
+            viewBox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve">
+            <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+          </svg></button>
       </div>
 
     </section>
+
+
+
 
     <!-- SECTION PORTFOLIO -->
 
@@ -190,41 +337,194 @@
 
       <div id="projects">
 
+        <!-- AUDITORIO CARTUJA -->
+
+        <div class="project js-reveal">
+          <a href="https://auditoriocartuja.com/" target="_blank">
+
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/auditorio.mp4" type="video/mp4">
+            </video>
+
+            <h2>Auditorio Cartuja</h2>
+          </a>
+
+          <p>Contributed to the design and development of a website for a premier venue in Seville for concerts, events,
+            and cultural activities, while working at Inficon Global. Built with <span>WordPress</span> and
+            <span>Elementor</span>, the project emphasized enhancing user experience through a modern design that
+            highlights the auditorium's facilities and upcoming events.
+          </p>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle"></span>
+            <a href="https://auditoriocartuja.com/" target="_blank" class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Open website
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CONCHA VEGA -->
+
+        <div class="project js-reveal">
+          <a href="https://www.conchavega.com/" target="_blank">
+
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/concha.mp4" type="video/mp4">
+            </video>
+
+            <h2>Concha Vega</h2>
+          </a>
+
+          <p>Assisted in the development of an online shop for Concha Vega, a brand specializing in flamenca fashion and
+            accessories, while working for Inficon Global. Built with <span>WordPress</span>, <span>Elementor</span> and
+            <span>WooCommerce</span>. Focused on improving the user experience by enabling seamless viewing of product
+            photos for each variation (color and size) and simplifying the process of adding items to the cart.
+          </p>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle"></span>
+            <a href="https://www.conchavega.com/" target="_blank" class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Open website
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- LA MANGLANA -->
+
+        <div class="project js-reveal">
+          <a href="https://lamanglana.es/" target="_blank">
+
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/manglana.mp4" type="video/mp4">
+            </video>
+
+            <h2>La Manglana</h2>
+          </a>
+
+          <p>Contributed to the design and development of a website for a venue available for events, weddings, and
+            more, while working at Inficon Global. Built with <span>WordPress</span> and <span>Elementor</span>, the
+            project focused on showcasing the venue's charm and versatility through an elegant user interface.</p>
+            <div class="portfolio-button-container">
+              <span class="portfolio-button-circle"></span>
+              <a href="https://lamanglana.es/" target="_blank" class="portfolio-button-inner">
+                <span class="portfolio-button-text">
+                  Open website
+                </span>
+              </a>
+            </div>
+        </div>
+
+        <!-- ORTHODONTIC -->
+
+        <div class="project js-reveal">
+          <a href="https://orthodonticarea.es/" target="_blank">
+
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/orthodontic.mp4" type="video/mp4">
+            </video>
+
+            <h2>Orthodontic</h2>
+          </a>
+
+          <p>Designed and developed Orthodontic's website, a dentist clinic, while working for Inficon Global, focusing
+            on creating a fun and engaging design to offer an approachable and welcoming experience for patients. Used
+            <span>WordPress</span> and <span>Elementor</span>
+          </p>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle"></span>
+            <a href="https://orthodonticarea.es/" target="_blank" class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Open website
+              </span>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- LA NORIA DE LOS SUEÑOS -->
+
+        <div class="project js-reveal">
+          <a href="https://xn--lanoriadelossueos-txb.es/" target="_blank">
+
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/noria.mp4" type="video/mp4">
+            </video>
+
+            <h2>La Noria de los Sueños</h2>
+          </a>
+
+          <p>Designed and developed while working at Inficon Global. Built using <span>WordPress</span> and
+            <span>Elementor</span>, the website was crafted for a wedding planning service, focusing on an elegant,
+            minimalist, and visually appealing design.
+          </p>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle"></span>
+            <a href="https://xn--lanoriadelossueos-txb.es/" target="_blank" class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Open website
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- ORI -->
+
         <div class="project js-reveal">
           <a href="https://vicaura.es/ori/" target="_blank">
-            <video autoplay loop muted>
-              <source src="./src/media/ori.mp4" type="video/mp4">
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/ori.mp4" type="video/mp4">
             </video>
 
             <h2>Ori and The Blind Forest</h2>
           </a>
           <p>Website inspired by the videogame Ori & The Blind Forest. In the <span>Skills</span> section , we used
             <span>PHP</span>,
-            <span>JQuery</span> and also <span>AJAX</span> to extract the data of the proganist’s skills from a
-            database and show them dynamically using a carousel.</p>
-          <a href="https://vicaura.es/ori/" target="_blank">LINK TO WEBSITE</a>
+            <span>JQuery</span> and also <span>AJAX</span> to extract the data of the proganist's skills from a
+            database and show them dynamically using a carousel.
+          </p>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle"></span>
+            <a href="https://vicaura.es/ori/" target="_blank" class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Open website
+              </span>
+            </a>
+          </div>
         </div>
+
+        <!-- KATNIP -->
 
         <div class="project js-reveal">
           <a href="https://vicaura.es/katnip/" target="_blank">
-            <video autoplay loop muted>
-              <source src="./src/media/katnip.mp4" type="video/mp4">
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/katnip.mp4" type="video/mp4">
             </video>
 
             <h2>Katnip</h2>
           </a>
 
-          <p>This project was made using <span>WordPress</span> and some plugins like <span>Elementor Pro</span>. The
+          <p>This project was made using <span>WordPress</span> and some plugins like <span>Elementor</span>. The
             chosen theme was <span>"cat cafe"</span>,
             so the website was designed to attract both customers and potential adopters.</p>
-          <a href="https://vicaura.es/katnip/" target="_blank">LINK TO WEBSITE</a>
+            <div class="portfolio-button-container">
+              <span class="portfolio-button-circle"></span>
+              <a href="https://vicaura.es/katnip/" target="_blank" class="portfolio-button-inner">
+                <span class="portfolio-button-text">
+                  Open website
+                </span>
+              </a>
+            </div>
         </div>
+
+        <!-- KOREAN FOOD -->
 
         <div class="project js-reveal">
           <a href="https://korean-food-laura-cote.netlify.app/" target="_blank">
 
-            <video autoplay loop muted>
-              <source src="./src/media/korean.mp4" type="video/mp4">
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-website">
+              <source src="./src/media/videos/korean.mp4" type="video/mp4">
             </video>
 
             <h2>Korean food</h2>
@@ -232,16 +532,26 @@
 
           <p>This website was built from scratch using <span>HTML5</span>, <span>CSS3</span> and
             <span>JavaScript</span>. A <span>horizontal scroll</span> is used to go
-            through a bit of the history of <span>South Korean food</span> and a few recipes.</p>
-          <a href="https://korean-food-laura-cote.netlify.app/" target="_blank">LINK TO WEBSITE</a>
+            through a bit of the history of <span>South Korean food</span> and a few recipes.
+          </p>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle"></span>
+            <a href="https://korean-food-laura-cote.netlify.app/" target="_blank" class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Open website
+              </span>
+            </a>
+          </div>
         </div>
+
+        <!-- TOURNING -->
 
         <div class="project js-reveal">
           <a href="https://www.figma.com/proto/IPHhyykYVbgoU5fujaegwd/Memoria-Tourning-PF-UX%2FUI?page-id=0%3A1&node-id=3%3A3&starting-point-node-id=3%3A3&scaling=contain"
             target="_blank">
 
-            <video autoplay loop muted>
-              <source src="./src/media/tourning.mp4" type="video/mp4">
+            <video autoplay loop muted disablePictureInPicture cursor-class="open-project">
+              <source src="./src/media/videos/tourning.mp4" type="video/mp4">
             </video>
 
             <h2>Tourning</h2>
@@ -250,10 +560,20 @@
           <p>Designed a <span>travel app</span> where your itinerary changed according to the weather. <span>Design
               Thinking</span> was the
             methodology used for the entire <span>UX/UI</span> process, and then a prototype was made with
-            <span>Figma</span>.</p>
-          <a href="https://www.figma.com/proto/IPHhyykYVbgoU5fujaegwd/Memoria-Tourning-PF-UX%2FUI?page-id=0%3A1&node-id=3%3A3&starting-point-node-id=3%3A3&scaling=contain"
-            target="_blank">LINK TO PROJECT</a>
+            <span>Figma</span>.
+          </p>
+          <div class="portfolio-button-container">
+            <span class="portfolio-button-circle"></span>
+            <a href="https://www.figma.com/proto/IPHhyykYVbgoU5fujaegwd/Memoria-Tourning-PF-UX%2FUI?page-id=0%3A1&node-id=3%3A3&starting-point-node-id=3%3A3&scaling=contain" target="_blank" class="portfolio-button-inner">
+              <span class="portfolio-button-text">
+                Open project
+              </span>
+            </a>
+          </div>
         </div>
+
+
+
 
       </div>
 
@@ -274,7 +594,8 @@
 
       <div class="contactForm js-reveal">
 
-        <form method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field" action="/pages/thankyou.html" id="form_EN">
+        <form method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field"
+          action="/pages/thankyou.html" id="form_EN">
 
           <input name="bot-field" class="hidden">
 
@@ -293,7 +614,8 @@
 
         </form>
 
-        <form method="POST" name="contacto" data-netlify="true" netlify-honeypot="bot-field" action="/pages/gracias.html" id="form_ES">
+        <form method="POST" name="contacto" data-netlify="true" netlify-honeypot="bot-field"
+          action="/pages/gracias.html" id="form_ES">
 
           <input name="bot-field" class="hidden">
 
@@ -334,7 +656,7 @@
 
   <!-- Script link-->
   <script src="src/scripts/script.js"></script>
-
-</body>
+  <script src="src/scripts/timeline.js"></script>
+  </body>
 
 </html>
