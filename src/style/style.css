@@ -823,6 +823,7 @@ main a {
     margin: 0px auto;
     transform: translateX(0);
     width: 4750px;
+    /* flex-direction: row-reverse;  */
 }
 
 .dot-wrapper {
@@ -846,24 +847,24 @@ main a {
 /*POSICIONES ELEMENTOS*/
 
 .line-container>.dot-wrapper:nth-of-type(1) {
-    margin-top: 110px;
-    margin-left: -5px;
+    margin-top: 80px;
+    
 }
 
 .line-container>.dot-wrapper:nth-of-type(2) {
-    margin-top: 65px;
+    margin-top: 60px;
 }
 
 .line-container>.dot-wrapper:nth-of-type(3) {
-    margin-top: 110px;
+    margin-top: 100px;
 }
 
 .line-container>.dot-wrapper:nth-of-type(4) {
-    margin-top: 160px;
+    margin-top: 190px;
 }
 
 .line-container>.dot-wrapper:nth-of-type(5) {
-    margin-top: 90px;
+    margin-top: 110px;
 }
 
 
@@ -1543,7 +1544,7 @@ footer p {
 
     p,
     span {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     /*  .menu {

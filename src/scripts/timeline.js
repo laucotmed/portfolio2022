@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextButton = document.querySelector('.next-slide');
     const prevButton = document.querySelector('.prev-slide');
 
-    let currentIndex = 0; // Start with the first dot
+    let currentIndex = dotWrappers.length - 1; // Start with the last dot
     let scrollAmount = 0; // Initialize scrollAmount
     const scrollStep = 300;
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const scrollOffset = dotPosition.left - containerCenter + (dotPosition.width / 2);
 
-        scrollAmount -= scrollOffset;
+        scrollAmount -= scrollOffset; // Move the line left
         lineContainer.style.transform = `translateX(${scrollAmount}px)`;
 
         // Trigger the click event to show the info
@@ -55,16 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300); // Adjust timing as needed to match the scroll transition duration
     }
 
-    nextButton.addEventListener('click', function() {
-        if (currentIndex < dotWrappers.length - 1) {
-            currentIndex++;
+    prevButton.addEventListener('click', function() {
+        if (currentIndex > 0) { // Decrement for previous slide
+            currentIndex--;
             centerDot(currentIndex);
         }
     });
 
-    prevButton.addEventListener('click', function() {
-        if (currentIndex > 0) {
-            currentIndex--;
+    nextButton.addEventListener('click', function() {
+        if (currentIndex < dotWrappers.length - 1) { // Increment for next slide
+            currentIndex++;
             centerDot(currentIndex);
         }
     });
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initial centering and activation of the first dot
+    // Initial centering and activation of the first dot (now the last one)
     setTimeout(() => {
         centerDot(currentIndex);
     }, 100); // Delay to ensure the DOM is fully rendered

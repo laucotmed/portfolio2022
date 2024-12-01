@@ -206,11 +206,11 @@ $(document).ready(function () {
 
             $(".timeline-title").text("Experiencia y formación");
 
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(1) > .texto-historia > span").html("Desarrolladora Web <br>en Inficon Global");
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(2) > .texto-historia > span").html("Máster Profesional en Desarrollo y Conceptualización Web en CEI: Escuela de Diseño y Marketing");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(5) > .texto-historia > span").html("Desarrolladora Web <br>en Inficon Global");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(4) > .texto-historia > span").html("Máster Profesional en Desarrollo y Conceptualización Web en CEI: Escuela de Diseño y Marketing");
             $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(3) > .texto-historia > span").html("Artista 2D & 3D <br>en Croxel Studios");
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(4) > .texto-historia > span").html("Curso avanzado de Modelado 3D y Animación para videojuegos en Aula Arcade");
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(5) > .texto-historia > span").html("Grado en Comunicación Audiovisual en la Universidad de Sevilla");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(2) > .texto-historia > span").html("Curso avanzado de Modelado 3D y Animación para videojuegos en Aula Arcade");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(1) > .texto-historia > span").html("Grado en Comunicación Audiovisual en la Universidad de Sevilla");
 
 
 
@@ -320,8 +320,8 @@ $(document).ready(function () {
             $("#about h2:nth-of-type(1)").text("//ABOUT");
 
             $("#profile_description p").html("Hi! My name is <span>Laura Cote Medina</span>. I'm a <span>web developer</span> from Spain with <span>proffesional experience</span> in creating and managing attractive websites using technologies like <span>HTML, CSS, and JavaScript</span>. I'm passionate about <span>Web Design</span> and eager to continue growing professionally, especially in <span>FrontEnd</span> development. I'm skilled at collaborating with <span>multidisciplinary teams</span> while also being <span>highly independent</span> and effective when solving problems on my own. I'm committed to <span>continuous improvement</span> and adopting new technologies.");
-            $("#profile_description a").text("Download CV");
-            $("#profile_description a").attr("href", "./src/media/CV_Laura_Cote_ENG.pdf")
+            $("#profile_description a span").text("Download CV");
+            $("#profile_description a").attr("href", "./src/media/CV_Laura_Cote_EN_2024.pdf")
 
             $("#about h2:nth-of-type(2)").text("Tools & Technologies");
 
@@ -329,11 +329,11 @@ $(document).ready(function () {
 
             $(".timeline-title").text("Experience and Education");
 
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(1) > .texto-historia > span").html("Web Developer <br>at Inficon Global");
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(2) > .texto-historia > span").html("Professional Master's Degree <br>in Web Development and Conceptualization at CEI: School of Design & Marketing Marketing");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(5) > .texto-historia > span").html("Web Developer <br>at Inficon Global");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(4) > .texto-historia > span").html("Professional Master's Degree <br>in Web Development and Conceptualization at CEI: School of Design & Marketing Marketing");
             $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(3) > .texto-historia > span").html("2D & 3D Artist <br>at Croxel Studios");
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(4) > .texto-historia > span").html("Advanced 3D Modeling and Animation for videogames course at Aula Arcade");
-            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(5) > .texto-historia > span").html("Degree in Audiovisual Communication at the University of Seville");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(2) > .texto-historia > span").html("Advanced 3D Modeling and Animation for videogames course at Aula Arcade");
+            $("#about > .timeline-wrapper > .line-container > .dot-wrapper:nth-of-type(1) > .texto-historia > span").html("Degree in Audiovisual Communication at the University of Seville");
 
             //Portfolio
 
