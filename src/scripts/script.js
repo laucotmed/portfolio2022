@@ -218,40 +218,40 @@ $(document).ready(function () {
 
             //Auditorio
             $(".project:nth-of-type(1) p").html('Colaboré en el diseño y desarrollo de un sitio web para un importante auditorio sevillano donde se realizan conciertos, eventos y actividades culturales, mientras trabajaba en Inficon Global. Construido con <span>WordPress</span> y <span>Elementor</span>, el proyecto hizo hincapié en facilitar la experiencia del usuario a través de un diseño moderno que destaca las instalaciones del auditorio y los próximos eventos.');
-            $(".project:nth-of-type(1) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(1) .portfolio-button-text").text('VER WEB');
 
             //Concha Vega
             $(".project:nth-of-type(2) p").html('Asistí en el desarrollo de una tienda online para Concha Vega, una marca especializada en moda flamenca y accesorios, mientras trabajaba para Inficon Global. Construida con <span>WordPress</span>, <span>Elementor</span> y <span>WooCommerce</span>. Me centré en mejorar la experiencia de usuario permitiendo la fácil visualización de las fotos de cada variación del producto (color y talla) y simplificando el proceso de añadir artículos al carrito.');
-            $(".project:nth-of-type(2) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(2) .portfolio-button-text").text('VER WEB');
 
             //Manglana
             $(".project:nth-of-type(3) p").html('Contribuí al diseño y desarrollo de un sitio web para una finca disponible para eventos, bodas y más, mientras trabajaba en Inficon Global. Construido con <span>WordPress</span> y <span>Elementor</span>, el proyecto se centró en mostrar el encanto y la versatilidad del lugar a través de una elegante interfaz de usuario.');
-            $(".project:nth-of-type(3) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(3) .portfolio-button-text").text('VER WEB');
 
             //Orthodontic
             $(".project:nth-of-type(4) p").html('Diseñé y desarrollé la web de Orthodontic, una clínica dental, mientras trabajaba para Inficon Global, centrándome en crear un diseño divertido y atractivo para ofrecer una experiencia cercana y acogedora a los pacientes, utilizando <span>WordPress</span> y <span>Elementor</span>.');
-            $(".project:nth-of-type(4) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(4) .portfolio-button-text").text('VER WEB');
 
             //Noria
             $(".project:nth-of-type(5) p").html('Diseñado y desarrollado mientras trabajaba en Inficon Global. Construido con <span>WordPress</span> y <span>Elementor</span>, el sitio web fue creado para un servicio de planificación de bodas, con en un diseño elegante, minimalista y visualmente atractivo.');
-            $(".project:nth-of-type(5) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(5) .portfolio-button-text").text('VER WEB');
 
 
             //Ori
             $(".project:nth-of-type(6) p").html('Página web inspirada en el videojuego "Ori & The Blind Forest". En la sección <span>Skills</span> usé <span>PHP</span>, <span>JQuery</span> y <span>AJAX</span> para extraer de una base de datos las distintas habilidades del protagonista y mostrarlas de forma dinámica mediante un carrusel.');
-            $(".project:nth-of-type(6) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(6) .portfolio-button-text").text('VER WEB');
 
             //Katnip
             $(".project:nth-of-type(7) p").html('Este proyecto se realizó empleando <span>WordPress</span> y algunos plugins como <span>Elementor Pro</span>. La temática elegida fue <span>"cat cafe"</span>, así que la página web fue diseñada para atraer tanto a posibles clientes de la cafetería como a adoptantes.');
-            $(".project:nth-of-type(7) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(7) .portfolio-button-text").text('VER WEB');
 
             //Korean Food
             $(".project:nth-of-type(8) p").html('Esta página web fue creada desde cero usando <span>HTML5</span>, <span>CSS3</span> y <span>JavaScript</span>. Utilizamos un <span>scroll horizontal</span> para recorrer un poco de la historia de la <span>gastronomía surcoreana</span> y unas pocas recetas.');
-            $(".project:nth-of-type(8) a:nth-of-type(2)").text('VER WEB');
+            $(".project:nth-of-type(8) .portfolio-button-text").text('VER WEB');
 
             //Tourning
             $(".project:nth-of-type(9) p").html('Diseño de una <span>app para viajes</span> en la que el itinerario del usuario cambiara según las condiciones climáticas. Se empleó la metodología ágil de <span>"Design Thinking"</span> para todo el proceso de investigación y diseño de <span>UX/UI</span> y se realizó un prototipo en <span>Figma</span>.');
-            $(".project:nth-of-type(9) a:nth-of-type(2)").text('VER PROYECTO');
+            $(".project:nth-of-type(9) .portfolio-button-text").text('VER PROYECTO');
 
             //Contact
             $("#contact h2").text("//CONTACTO");
@@ -339,40 +339,40 @@ $(document).ready(function () {
 
             //Auditorio
             $(".project:nth-of-type(1) p").html("Contributed to the design and development of a website for a premier venue in Seville for concerts, events, and cultural activities, while working at Inficon Global. Built with <span>WordPress</span> and <span>Elementor</span>, the project emphasized enhancing user experience through a modern design that highlights the auditorium's facilities and upcoming events.");
-            $(".project:nth-of-type(1) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(1) .portfolio-button-text").text('OPEN WEBSITE');
 
             //Concha Vega
             $(".project:nth-of-type(2) p").html('Assisted in the development of an online shop for Concha Vega, a brand specializing in flamenca fashion and accessories, while working for Inficon Global. Built with <span>WordPress</span>, <span>Elementor</span> and <span>WooCommerce</span>. Focused on improving the user experience by enabling seamless viewing of product photos for each variation (color and size) and simplifying the process of adding items to the cart.');
-            $(".project:nth-of-type(2) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(2) .portfolio-button-text").text('OPEN WEBSITE');
 
             //Manglana
             $(".project:nth-of-type(3) p").html("Contributed to the design and development of a website for a venue available for events, weddings, and more, while working at Inficon Global. Built with <span>WordPress</span> and <span>Elementor</span>, the project focused on showcasing the venue's charm and versatility through an elegant user interface.");
-            $(".project:nth-of-type(3) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(3) .portfolio-button-text").text('OPEN WEBSITE');
 
             //Orthodontic
             $(".project:nth-of-type(4) p").html("Designed and developed Orthodontic's website, a dentist clinic, while working for Inficon Global, focusing on creating a fun and engaging design to offer an approachable and welcoming experience for patients. Used <span>WordPress</span> and <span>Elementor</span>");
-            $(".project:nth-of-type(4) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(4) .portfolio-button-text").text('OPEN WEBSITE');
 
             //Noria
             $(".project:nth-of-type(5) p").html('Designed and developed while working at Inficon Global. Built using <span>WordPress</span> and <span>Elementor</span>, the website was crafted for a wedding planning service, focusing on an elegant, minimalist, and visually appealing design.');
-            $(".project:nth-of-type(5) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(5) .portfolio-button-text").text('OPEN WEBSITE');
 
 
             //Ori
             $(".project:nth-of-type(6) p").html('Website inspired by the videogame Ori & The Blind Forest. In the <span>Skills</span> section , we used <span>PHP</span>, <span>JQuery</span> and also <span>AJAX</span> to extract the data of the proganist’s skills from a database and show them dynamically using a carousel.');
-            $(".project:nth-of-type(6) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(6) .portfolio-button-text").text('OPEN WEBSITE');
 
             //Katnip
             $(".project:nth-of-type(7) p").html('This project was made using <span>WordPress</span> and some plugins like <span>Elementor Pro</span>. The chosen theme was <span>"cat cafe"</span>, so the website was designed to attract both customers and potential adopters.');
-            $(".project:nth-of-type(7) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(7) .portfolio-button-text").text('OPEN WEBSITE');
 
             //Korean Food
             $(".project:nth-of-type(8) p").html('This website was built from scratch using <span>HTML5</span>, <span>CSS3</span> and <span>JavaScript</span>. A <span>horizontal scroll</span> is used to go through a bit of the history of <span>South Korean food</span> and a few recipes.');
-            $(".project:nth-of-type(8) a:nth-of-type(2)").text('OPEN WEBSITE');
+            $(".project:nth-of-type(8) .portfolio-button-text").text('OPEN WEBSITE');
 
             //Tourning
             $(".project:nth-of-type(9) p").html('Designed a <span>travel app</span> where your itinerary changed according to the weather. <span>Design Thinking</span> was the methodology used for the entire <span>UX/UI</span> process, and then a prototype was made with <span>Figma</span>.');
-            $(".project:nth-of-type(9) a:nth-of-type(2)").text('OPEN PROJECT');
+            $(".project:nth-of-type(9) .portfolio-button-text").text('OPEN PROJECT');
 
             //Contact
             $("#contact h2").text("//CONTACT");
